@@ -41,6 +41,9 @@ class Soldier: NSObject {
 	var y:Int = -1
 	
 	weak var view:SoldierView?
+	weak var cell:BattleCell? {
+		return view?.cell
+	}
 	var attackableSoldiers:[Soldier] = []
 	
 	class func totalScutaForType(type:SoldierType)->Int{

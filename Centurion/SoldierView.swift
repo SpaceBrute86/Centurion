@@ -29,7 +29,7 @@ class SoldierView: UIView {
 			imageName += "Red"
 		case .blue:
 			healthBar.frame = CGRectMake(1, 1, frame.size.width-2, 1)
-			healthBar.transform = CGAffineTransformRotate(healthBar.transform,CGFloat(M_PI/2.0))
+			healthBar.transform = CGAffineTransformRotate(healthBar.transform,CGFloat(M_PI))
 			imageName += "Blue"
 		}
 		switch soldier.type {
@@ -39,6 +39,7 @@ class SoldierView: UIView {
 		}
 		imageView.image = UIImage(named: "\(imageName).png")
 		super.init(frame: frame)
+		soldier.view = self
 		addSubview(imageView)
 		addSubview(healthBar)
 	}
@@ -48,3 +49,20 @@ class SoldierView: UIView {
 	}
 
 }
+func weaponViewForWeapon(weapon:RulesEngine.Weapon,angle:CGFloat) -> UIImageView {
+	var img:UIImageView
+	switch weapon {
+	case .pilum: img = UIImageView(image: UIImage(named: "Spear.png"))
+	case .gladius: img = UIImageView(image: UIImage(named: "Sword.png"))
+	}
+	img.opaque = false;
+	img.transform=CGAffineTransformMakeRotation( angle-CGFloat(M_PI_2) )
+	return img
+	
+}
+
+
+
+
+
+
