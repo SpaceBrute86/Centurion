@@ -6,20 +6,294 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E70D69AC1A279D87001B380F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70D69AB1A279D87001B380F /* AppDelegate.swift */; };
+		E70D69AE1A279D87001B380F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70D69AD1A279D87001B380F /* MenuViewController.swift */; };
+		E70D69B11A279D87001B380F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70D69AF1A279D87001B380F /* Main.storyboard */; };
+		E70D69B31A279D87001B380F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70D69B21A279D87001B380F /* Images.xcassets */; };
+		E70D69C21A279D88001B380F /* CenturionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70D69C11A279D88001B380F /* CenturionTests.swift */; };
+		E70D69CC1A279E43001B380F /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E70D69CB1A279E43001B380F /* Launch Screen.xib */; };
+		E70D69DA1A279F0E001B380F /* BlueArcher.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D01A279F0E001B380F /* BlueArcher.png */; };
+		E70D69DB1A279F0E001B380F /* BlueCavalry.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D11A279F0E001B380F /* BlueCavalry.png */; };
+		E70D69DC1A279F0E001B380F /* BlueHelmet.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D21A279F0E001B380F /* BlueHelmet.png */; };
+		E70D69DD1A279F0E001B380F /* BlueHelmetHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D31A279F0E001B380F /* BlueHelmetHighlight.png */; };
+		E70D69DE1A279F0E001B380F /* BlueLegion.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D41A279F0E001B380F /* BlueLegion.png */; };
+		E70D69DF1A279F0E001B380F /* RedArcher.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D51A279F0E001B380F /* RedArcher.png */; };
+		E70D69E01A279F0E001B380F /* RedCavalry.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D61A279F0E001B380F /* RedCavalry.png */; };
+		E70D69E11A279F0E001B380F /* RedHelmet.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D71A279F0E001B380F /* RedHelmet.png */; };
+		E70D69E21A279F0E001B380F /* RedHelmetHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D81A279F0E001B380F /* RedHelmetHighlight.png */; };
+		E70D69E31A279F0E001B380F /* RedLegion.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D91A279F0E001B380F /* RedLegion.png */; };
+		E70D69ED1A279F35001B380F /* Gladius.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69E41A279F35001B380F /* Gladius.png */; };
+		E70D69EE1A279F35001B380F /* GladiusDis.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69E51A279F35001B380F /* GladiusDis.png */; };
+		E70D69EF1A279F35001B380F /* Pilum.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69E61A279F35001B380F /* Pilum.png */; };
+		E70D69F01A279F35001B380F /* PilumDis.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69E71A279F35001B380F /* PilumDis.png */; };
+		E70D69F11A279F35001B380F /* shield.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69E81A279F35001B380F /* shield.png */; };
+		E70D69F21A279F35001B380F /* Spear_graphic.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69E91A279F35001B380F /* Spear_graphic.png */; };
+		E70D69F31A279F35001B380F /* Spear.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69EA1A279F35001B380F /* Spear.png */; };
+		E70D69F41A279F35001B380F /* Sword_graphic.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69EB1A279F35001B380F /* Sword_graphic.png */; };
+		E70D69F51A279F35001B380F /* Sword.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69EC1A279F35001B380F /* Sword.png */; };
+		E70D69FC1A27A009001B380F /* ReceiptChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70D69FB1A27A009001B380F /* ReceiptChecker.swift */; };
+		E70D69FF1A27A1A0001B380F /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70D69FE1A27A1A0001B380F /* FoundationExtensions.swift */; };
+		E7E7C33F1A27A7EC005F3582 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C33E1A27A7EC005F3582 /* StoreManager.swift */; };
+		E7E7C3421A27AF11005F3582 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C3411A27AF11005F3582 /* GameViewController.swift */; };
+		E7E7C3441A27B831005F3582 /* LevelMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C3431A27B831005F3582 /* LevelMeter.swift */; };
+		E7E7C3461A27BEA8005F3582 /* BattleField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C3451A27BEA8005F3582 /* BattleField.swift */; };
+		E7E7C3481A27C2E7005F3582 /* SoldierView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C3471A27C2E7005F3582 /* SoldierView.swift */; };
+		E7E7C34B1A27C33A005F3582 /* Soldier.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C34A1A27C33A005F3582 /* Soldier.swift */; };
+		E7E7C34D1A27D964005F3582 /* RulesEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C34C1A27D964005F3582 /* RulesEngine.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E70D69BC1A279D87001B380F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E70D699A1A279CC8001B380F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E70D69A51A279D87001B380F;
+			remoteInfo = Centurion;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E70D69A61A279D87001B380F /* Centurion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Centurion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E70D69AA1A279D87001B380F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E70D69AB1A279D87001B380F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E70D69AD1A279D87001B380F /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E70D69B01A279D87001B380F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E70D69B21A279D87001B380F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E70D69BB1A279D87001B380F /* CenturionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CenturionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E70D69C01A279D88001B380F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E70D69C11A279D88001B380F /* CenturionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CenturionTests.swift; sourceTree = "<group>"; };
+		E70D69CB1A279E43001B380F /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		E70D69D01A279F0E001B380F /* BlueArcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueArcher.png; sourceTree = "<group>"; };
+		E70D69D11A279F0E001B380F /* BlueCavalry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueCavalry.png; sourceTree = "<group>"; };
+		E70D69D21A279F0E001B380F /* BlueHelmet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueHelmet.png; sourceTree = "<group>"; };
+		E70D69D31A279F0E001B380F /* BlueHelmetHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueHelmetHighlight.png; sourceTree = "<group>"; };
+		E70D69D41A279F0E001B380F /* BlueLegion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueLegion.png; sourceTree = "<group>"; };
+		E70D69D51A279F0E001B380F /* RedArcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedArcher.png; sourceTree = "<group>"; };
+		E70D69D61A279F0E001B380F /* RedCavalry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedCavalry.png; sourceTree = "<group>"; };
+		E70D69D71A279F0E001B380F /* RedHelmet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedHelmet.png; sourceTree = "<group>"; };
+		E70D69D81A279F0E001B380F /* RedHelmetHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedHelmetHighlight.png; sourceTree = "<group>"; };
+		E70D69D91A279F0E001B380F /* RedLegion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedLegion.png; sourceTree = "<group>"; };
+		E70D69E41A279F35001B380F /* Gladius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gladius.png; sourceTree = "<group>"; };
+		E70D69E51A279F35001B380F /* GladiusDis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GladiusDis.png; sourceTree = "<group>"; };
+		E70D69E61A279F35001B380F /* Pilum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pilum.png; sourceTree = "<group>"; };
+		E70D69E71A279F35001B380F /* PilumDis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PilumDis.png; sourceTree = "<group>"; };
+		E70D69E81A279F35001B380F /* shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield.png; sourceTree = "<group>"; };
+		E70D69E91A279F35001B380F /* Spear_graphic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spear_graphic.png; sourceTree = "<group>"; };
+		E70D69EA1A279F35001B380F /* Spear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spear.png; sourceTree = "<group>"; };
+		E70D69EB1A279F35001B380F /* Sword_graphic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sword_graphic.png; sourceTree = "<group>"; };
+		E70D69EC1A279F35001B380F /* Sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sword.png; sourceTree = "<group>"; };
+		E70D69F61A279F50001B380F /* What's new in this version */ = {isa = PBXFileReference; lastKnownFileType = text; path = "What's new in this version"; sourceTree = "<group>"; };
+		E70D69FB1A27A009001B380F /* ReceiptChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptChecker.swift; sourceTree = "<group>"; };
+		E70D69FD1A27A121001B380F /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		E70D69FE1A27A1A0001B380F /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		E7E7C33E1A27A7EC005F3582 /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
+		E7E7C3411A27AF11005F3582 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		E7E7C3431A27B831005F3582 /* LevelMeter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelMeter.swift; sourceTree = "<group>"; };
+		E7E7C3451A27BEA8005F3582 /* BattleField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleField.swift; sourceTree = "<group>"; };
+		E7E7C3471A27C2E7005F3582 /* SoldierView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoldierView.swift; sourceTree = "<group>"; };
+		E7E7C34A1A27C33A005F3582 /* Soldier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Soldier.swift; sourceTree = "<group>"; };
+		E7E7C34C1A27D964005F3582 /* RulesEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RulesEngine.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E70D69A31A279D87001B380F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E70D69B81A279D87001B380F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
 /* Begin PBXGroup section */
 		E70D69991A279CC8001B380F = {
 			isa = PBXGroup;
 			children = (
+				E70D69F61A279F50001B380F /* What's new in this version */,
+				E70D69A81A279D87001B380F /* Centurion */,
+				E70D69BE1A279D88001B380F /* CenturionTests */,
+				E70D69A71A279D87001B380F /* Products */,
 			);
 			sourceTree = "<group>";
 		};
+		E70D69A71A279D87001B380F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E70D69A61A279D87001B380F /* Centurion.app */,
+				E70D69BB1A279D87001B380F /* CenturionTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E70D69A81A279D87001B380F /* Centurion */ = {
+			isa = PBXGroup;
+			children = (
+				E70D69FD1A27A121001B380F /* Bridging-Header.h */,
+				E70D69FE1A27A1A0001B380F /* FoundationExtensions.swift */,
+				E70D69AB1A279D87001B380F /* AppDelegate.swift */,
+				E70D69AF1A279D87001B380F /* Main.storyboard */,
+				E70D69B21A279D87001B380F /* Images.xcassets */,
+				E70D69CB1A279E43001B380F /* Launch Screen.xib */,
+				E70D69CF1A279EF4001B380F /* Images */,
+				E70D69FA1A279FEF001B380F /* Store */,
+				E70D69F91A279F96001B380F /* Menu */,
+				E7E7C3401A27AD77005F3582 /* Game UI */,
+				E7E7C3491A27C2FB005F3582 /* Game Logic */,
+				E70D69A91A279D87001B380F /* Supporting Files */,
+			);
+			path = Centurion;
+			sourceTree = "<group>";
+		};
+		E70D69A91A279D87001B380F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E70D69AA1A279D87001B380F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E70D69BE1A279D88001B380F /* CenturionTests */ = {
+			isa = PBXGroup;
+			children = (
+				E70D69C11A279D88001B380F /* CenturionTests.swift */,
+				E70D69BF1A279D88001B380F /* Supporting Files */,
+			);
+			path = CenturionTests;
+			sourceTree = "<group>";
+		};
+		E70D69BF1A279D88001B380F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E70D69C01A279D88001B380F /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E70D69CF1A279EF4001B380F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				E70D69D01A279F0E001B380F /* BlueArcher.png */,
+				E70D69D11A279F0E001B380F /* BlueCavalry.png */,
+				E70D69D21A279F0E001B380F /* BlueHelmet.png */,
+				E70D69D31A279F0E001B380F /* BlueHelmetHighlight.png */,
+				E70D69D41A279F0E001B380F /* BlueLegion.png */,
+				E70D69D51A279F0E001B380F /* RedArcher.png */,
+				E70D69D61A279F0E001B380F /* RedCavalry.png */,
+				E70D69D71A279F0E001B380F /* RedHelmet.png */,
+				E70D69D81A279F0E001B380F /* RedHelmetHighlight.png */,
+				E70D69D91A279F0E001B380F /* RedLegion.png */,
+				E70D69E41A279F35001B380F /* Gladius.png */,
+				E70D69E51A279F35001B380F /* GladiusDis.png */,
+				E70D69E61A279F35001B380F /* Pilum.png */,
+				E70D69E71A279F35001B380F /* PilumDis.png */,
+				E70D69E81A279F35001B380F /* shield.png */,
+				E70D69E91A279F35001B380F /* Spear_graphic.png */,
+				E70D69EA1A279F35001B380F /* Spear.png */,
+				E70D69EB1A279F35001B380F /* Sword_graphic.png */,
+				E70D69EC1A279F35001B380F /* Sword.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E70D69F91A279F96001B380F /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				E70D69AD1A279D87001B380F /* MenuViewController.swift */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		E70D69FA1A279FEF001B380F /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				E70D69FB1A27A009001B380F /* ReceiptChecker.swift */,
+				E7E7C33E1A27A7EC005F3582 /* StoreManager.swift */,
+			);
+			name = Store;
+			sourceTree = "<group>";
+		};
+		E7E7C3401A27AD77005F3582 /* Game UI */ = {
+			isa = PBXGroup;
+			children = (
+				E7E7C3411A27AF11005F3582 /* GameViewController.swift */,
+				E7E7C3431A27B831005F3582 /* LevelMeter.swift */,
+				E7E7C3451A27BEA8005F3582 /* BattleField.swift */,
+				E7E7C3471A27C2E7005F3582 /* SoldierView.swift */,
+			);
+			name = "Game UI";
+			sourceTree = "<group>";
+		};
+		E7E7C3491A27C2FB005F3582 /* Game Logic */ = {
+			isa = PBXGroup;
+			children = (
+				E7E7C34A1A27C33A005F3582 /* Soldier.swift */,
+				E7E7C34C1A27D964005F3582 /* RulesEngine.swift */,
+			);
+			name = "Game Logic";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E70D69A51A279D87001B380F /* Centurion */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E70D69C31A279D88001B380F /* Build configuration list for PBXNativeTarget "Centurion" */;
+			buildPhases = (
+				E70D69A21A279D87001B380F /* Sources */,
+				E70D69A31A279D87001B380F /* Frameworks */,
+				E70D69A41A279D87001B380F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Centurion;
+			productName = Centurion;
+			productReference = E70D69A61A279D87001B380F /* Centurion.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E70D69BA1A279D87001B380F /* CenturionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E70D69C61A279D88001B380F /* Build configuration list for PBXNativeTarget "CenturionTests" */;
+			buildPhases = (
+				E70D69B71A279D87001B380F /* Sources */,
+				E70D69B81A279D87001B380F /* Frameworks */,
+				E70D69B91A279D87001B380F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E70D69BD1A279D87001B380F /* PBXTargetDependency */,
+			);
+			name = CenturionTests;
+			productName = CenturionTests;
+			productReference = E70D69BB1A279D87001B380F /* CenturionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		E70D699A1A279CC8001B380F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0620;
+				TargetAttributes = {
+					E70D69A51A279D87001B380F = {
+						CreatedOnToolsVersion = 6.2;
+					};
+					E70D69BA1A279D87001B380F = {
+						CreatedOnToolsVersion = 6.2;
+						TestTargetID = E70D69A51A279D87001B380F;
+					};
+				};
 			};
 			buildConfigurationList = E70D699D1A279CC8001B380F /* Build configuration list for PBXProject "Centurion" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -27,14 +301,105 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = E70D69991A279CC8001B380F;
+			productRefGroup = E70D69A71A279D87001B380F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				E70D69A51A279D87001B380F /* Centurion */,
+				E70D69BA1A279D87001B380F /* CenturionTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E70D69A41A279D87001B380F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E70D69F41A279F35001B380F /* Sword_graphic.png in Resources */,
+				E70D69F11A279F35001B380F /* shield.png in Resources */,
+				E70D69E01A279F0E001B380F /* RedCavalry.png in Resources */,
+				E70D69E31A279F0E001B380F /* RedLegion.png in Resources */,
+				E70D69F31A279F35001B380F /* Spear.png in Resources */,
+				E70D69B11A279D87001B380F /* Main.storyboard in Resources */,
+				E70D69EF1A279F35001B380F /* Pilum.png in Resources */,
+				E70D69EE1A279F35001B380F /* GladiusDis.png in Resources */,
+				E70D69B31A279D87001B380F /* Images.xcassets in Resources */,
+				E70D69E21A279F0E001B380F /* RedHelmetHighlight.png in Resources */,
+				E70D69E11A279F0E001B380F /* RedHelmet.png in Resources */,
+				E70D69F21A279F35001B380F /* Spear_graphic.png in Resources */,
+				E70D69DA1A279F0E001B380F /* BlueArcher.png in Resources */,
+				E70D69F51A279F35001B380F /* Sword.png in Resources */,
+				E70D69CC1A279E43001B380F /* Launch Screen.xib in Resources */,
+				E70D69DF1A279F0E001B380F /* RedArcher.png in Resources */,
+				E70D69F01A279F35001B380F /* PilumDis.png in Resources */,
+				E70D69DC1A279F0E001B380F /* BlueHelmet.png in Resources */,
+				E70D69DB1A279F0E001B380F /* BlueCavalry.png in Resources */,
+				E70D69ED1A279F35001B380F /* Gladius.png in Resources */,
+				E70D69DD1A279F0E001B380F /* BlueHelmetHighlight.png in Resources */,
+				E70D69DE1A279F0E001B380F /* BlueLegion.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E70D69B91A279D87001B380F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E70D69A21A279D87001B380F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E70D69FF1A27A1A0001B380F /* FoundationExtensions.swift in Sources */,
+				E70D69FC1A27A009001B380F /* ReceiptChecker.swift in Sources */,
+				E7E7C3441A27B831005F3582 /* LevelMeter.swift in Sources */,
+				E7E7C33F1A27A7EC005F3582 /* StoreManager.swift in Sources */,
+				E7E7C3461A27BEA8005F3582 /* BattleField.swift in Sources */,
+				E70D69AE1A279D87001B380F /* MenuViewController.swift in Sources */,
+				E7E7C34B1A27C33A005F3582 /* Soldier.swift in Sources */,
+				E7E7C3421A27AF11005F3582 /* GameViewController.swift in Sources */,
+				E7E7C34D1A27D964005F3582 /* RulesEngine.swift in Sources */,
+				E70D69AC1A279D87001B380F /* AppDelegate.swift in Sources */,
+				E7E7C3481A27C2E7005F3582 /* SoldierView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E70D69B71A279D87001B380F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E70D69C21A279D88001B380F /* CenturionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E70D69BD1A279D87001B380F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E70D69A51A279D87001B380F /* Centurion */;
+			targetProxy = E70D69BC1A279D87001B380F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E70D69AF1A279D87001B380F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E70D69B01A279D87001B380F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		E70D699E1A279CC8001B380F /* Debug */ = {
@@ -49,6 +414,189 @@
 			};
 			name = Release;
 		};
+		E70D69C41A279D88001B380F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Centurion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Centurion/Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		E70D69C51A279D88001B380F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = Centurion/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Centurion/Bridging-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E70D69C71A279D88001B380F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = CenturionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Centurion.app/Centurion";
+			};
+			name = Debug;
+		};
+		E70D69C81A279D88001B380F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = CenturionTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Centurion.app/Centurion";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -57,6 +605,24 @@
 			buildConfigurations = (
 				E70D699E1A279CC8001B380F /* Debug */,
 				E70D699F1A279CC8001B380F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E70D69C31A279D88001B380F /* Build configuration list for PBXNativeTarget "Centurion" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E70D69C41A279D88001B380F /* Debug */,
+				E70D69C51A279D88001B380F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E70D69C61A279D88001B380F /* Build configuration list for PBXNativeTarget "CenturionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E70D69C71A279D88001B380F /* Debug */,
+				E70D69C81A279D88001B380F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

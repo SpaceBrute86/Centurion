@@ -1,0 +1,21 @@
+
+
+1.2
+
+Consumer:
+Centurion is now available for iPhone and iPod Touch!
+UI Improvements
+Performance improvements
+Bug Fixes
+
+
+Developer:
+Centurion is now available for iPhone and iPod Touch
+Used series of graphics instead of progress bars to show weapon levels (UI improvement)
+Changed color of health bars (UI Improvement)
+Receipts are used for validating IAPs (DRM)
+Fixed Glitch with pressing spears quickly (Bug fix)
+Rewritten in Swift (Performance improvemnt)
+
+
+
