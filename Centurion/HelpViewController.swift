@@ -31,7 +31,7 @@ class HelpViewController: UIViewController, UIScrollViewDelegate{
 		pageControl.currentPage = page
 	}
 	override func viewDidAppear(animated: Bool) {
-		pageView.contentSize = CGSize(width: pageView.frame.size.width*2, height: pageView.frame.size.height)
+		pageView.contentSize = CGSize(width: pageView.frame.size.width*6, height: pageView.frame.size.height)
 	}
 	@IBAction func buy(sender:AnyObject){
 		storeManager.buyProduct(archerProductID)

@@ -26,7 +26,7 @@ class Soldier: NSObject {
 	var scuta:Int
 	var pilum:Int
 	var gladius:Int
-	
+	var archerDodged = false
 	init(army:Army,type:SoldierType){
 		self.army = army
 		self.type = type

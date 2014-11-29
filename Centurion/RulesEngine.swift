@@ -132,12 +132,20 @@ extension RulesEngine { //Making Moves
 			hits = rollGladiusDice(attacker.gladius)
 			attacker.gladius -= hits
 		case .pilum:
-			let range = distanceBetweenSoldiers(attacker, defender)
-			hits = rollPilumDice(attacker.pilum, range: range/3)
+			var range = distanceBetweenSoldiers(attacker, defender)/2 + 1
+			if attacker.type == .archer {
+				--range
+			}
+			hits = rollPilumDice(attacker.pilum, range: range)
 			attacker.pilum -= 10
 			if attacker.pilum < 0 { attacker.pilum == 0 }
 		}
 		//Defender rolls
+		if defender.type == .archer && weapon == .pilum && !defender.archerDodged {
+			defender.archerDodged = true
+			takeTurn()
+			return
+		}
 		let shieldPercent = defender.scuta/Soldier.totalScutaForType(defender.type)
 		var (dodge, shield) = rollDefenseDice(Int(10 - 5*shieldPercent), useExtraShields: weapon == .pilum)
 		if shield > defender.scuta { shield = defender.scuta }
