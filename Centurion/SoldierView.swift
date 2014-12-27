@@ -49,12 +49,13 @@ class SoldierView: UIView {
 	}
 
 }
-func weaponViewForWeapon(weapon:RulesEngine.Weapon,angle:CGFloat) -> UIImageView {
+func weaponViewForWeapon(weapon:Weapon,angle:CGFloat, cellSize:CGSize) -> UIImageView {
 	var img:UIImageView
 	switch weapon {
-	case .pilum: img = UIImageView(image: UIImage(named: "Spear.png"))
-	case .gladius: img = UIImageView(image: UIImage(named: "Sword.png"))
+	case .Pilum: img = UIImageView(image: UIImage(named: "Spear.png"))
+	case .Gladius: img = UIImageView(image: UIImage(named: "Sword.png"))
 	}
+	img.frame.size = cellSize * 1.6
 	img.opaque = false;
 	img.transform=CGAffineTransformMakeRotation( angle-CGFloat(M_PI_2) )
 	return img

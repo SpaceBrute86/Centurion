@@ -9,14 +9,28 @@
 import UIKit
 
 class BattleCell: UIView {
-	var x = 0
-	var y = 0
+	var location:Location = Location(x: 0, y: 0)
 	var soldier:SoldierView?
 }
 
 class BattleField: UIView, UIScrollViewDelegate {
 	var cells:[[BattleCell]]=[]
-
+	subscript(location: Location)->BattleCell{
+		get{
+			return cells[location.x][location.y]
+		}
+		set(newCell){
+			cells[location.x][location.y] = newCell
+		}
+	}
+	var gameCells:[BattleCell] {
+		var gameCells:[BattleCell] = []
+		for i in 1..<10 { gameCells += [cells[0][i]]}
+		for i in 1..<10 { gameCells += cells[i] }
+		for i in 1..<10 { gameCells += [cells[10][i]]}
+		return gameCells
+	}
+	
 	func createField() {
 		(superview as? UIScrollView)?.contentSize = frame.size
 		//Create Cells
@@ -29,8 +43,7 @@ class BattleField: UIView, UIScrollViewDelegate {
 				let cellX = CGFloat(x)*(cellSize+cellSpacing)
 				let cellY = CGFloat(y)*(cellSize+cellSpacing)
 				let cell = BattleCell(frame: CGRect(x:cellX, y: cellY, width: cellSize, height: cellSize))
-				cell.x = x
-				cell.y = y
+				cell.location = Location(x: x, y: y)
 				if (x==0||x==10)&&(y==0||y==10){
 					cell.backgroundColor = UIColor(red: 0, green: 0.3, blue: 0, alpha: 1)
 				}else{

@@ -34,8 +34,10 @@
 		E70D69F51A279F35001B380F /* Sword.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69EC1A279F35001B380F /* Sword.png */; };
 		E70D69FC1A27A009001B380F /* ReceiptChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70D69FB1A27A009001B380F /* ReceiptChecker.swift */; };
 		E70D69FF1A27A1A0001B380F /* FoundationExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70D69FE1A27A1A0001B380F /* FoundationExtensions.swift */; };
+		E73D00401A2A294400784672 /* GameMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73D003F1A2A294400784672 /* GameMove.swift */; };
 		E75F97911A28FD4200E444CA /* WinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75F97901A28FD4200E444CA /* WinnerViewController.swift */; };
 		E75F97931A2914B200E444CA /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75F97921A2914B200E444CA /* HelpViewController.swift */; };
+		E78F2E361A4E585200D0C47F /* AIPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E78F2E351A4E585200D0C47F /* AIPlayer.swift */; };
 		E7E7C33F1A27A7EC005F3582 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C33E1A27A7EC005F3582 /* StoreManager.swift */; };
 		E7E7C3421A27AF11005F3582 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C3411A27AF11005F3582 /* GameViewController.swift */; };
 		E7E7C3441A27B831005F3582 /* LevelMeter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7E7C3431A27B831005F3582 /* LevelMeter.swift */; };
@@ -89,8 +91,10 @@
 		E70D69FB1A27A009001B380F /* ReceiptChecker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReceiptChecker.swift; sourceTree = "<group>"; };
 		E70D69FD1A27A121001B380F /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		E70D69FE1A27A1A0001B380F /* FoundationExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoundationExtensions.swift; sourceTree = "<group>"; };
+		E73D003F1A2A294400784672 /* GameMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMove.swift; sourceTree = "<group>"; };
 		E75F97901A28FD4200E444CA /* WinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinnerViewController.swift; sourceTree = "<group>"; };
 		E75F97921A2914B200E444CA /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		E78F2E351A4E585200D0C47F /* AIPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AIPlayer.swift; sourceTree = "<group>"; };
 		E7E7C33E1A27A7EC005F3582 /* StoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		E7E7C3411A27AF11005F3582 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		E7E7C3431A27B831005F3582 /* LevelMeter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelMeter.swift; sourceTree = "<group>"; };
@@ -151,6 +155,7 @@
 				E70D69F91A279F96001B380F /* Menu */,
 				E7E7C3401A27AD77005F3582 /* Game UI */,
 				E7E7C3491A27C2FB005F3582 /* Game Logic */,
+				E73D003E1A2A292E00784672 /* Game AI */,
 				E70D69A91A279D87001B380F /* Supporting Files */,
 			);
 			path = Centurion;
@@ -226,6 +231,14 @@
 			name = Store;
 			sourceTree = "<group>";
 		};
+		E73D003E1A2A292E00784672 /* Game AI */ = {
+			isa = PBXGroup;
+			children = (
+				E78F2E351A4E585200D0C47F /* AIPlayer.swift */,
+			);
+			name = "Game AI";
+			sourceTree = "<group>";
+		};
 		E7E7C3401A27AD77005F3582 /* Game UI */ = {
 			isa = PBXGroup;
 			children = (
@@ -242,6 +255,7 @@
 			children = (
 				E7E7C34A1A27C33A005F3582 /* Soldier.swift */,
 				E7E7C34C1A27D964005F3582 /* RulesEngine.swift */,
+				E73D003F1A2A294400784672 /* GameMove.swift */,
 			);
 			name = "Game Logic";
 			sourceTree = "<group>";
@@ -369,11 +383,13 @@
 				E70D69FC1A27A009001B380F /* ReceiptChecker.swift in Sources */,
 				E7E7C3441A27B831005F3582 /* LevelMeter.swift in Sources */,
 				E75F97931A2914B200E444CA /* HelpViewController.swift in Sources */,
+				E73D00401A2A294400784672 /* GameMove.swift in Sources */,
 				E7E7C33F1A27A7EC005F3582 /* StoreManager.swift in Sources */,
 				E7E7C3461A27BEA8005F3582 /* BattleField.swift in Sources */,
 				E70D69AE1A279D87001B380F /* MenuViewController.swift in Sources */,
 				E7E7C34B1A27C33A005F3582 /* Soldier.swift in Sources */,
 				E7E7C3421A27AF11005F3582 /* GameViewController.swift in Sources */,
+				E78F2E361A4E585200D0C47F /* AIPlayer.swift in Sources */,
 				E7E7C34D1A27D964005F3582 /* RulesEngine.swift in Sources */,
 				E70D69AC1A279D87001B380F /* AppDelegate.swift in Sources */,
 				E7E7C3481A27C2E7005F3582 /* SoldierView.swift in Sources */,
@@ -558,7 +574,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = CenturionTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -602,7 +618,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = CenturionTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -17,7 +17,19 @@ enum Army {
 	case red
 	case blue
 }
-
+struct Location {
+	var x:Int
+	var y:Int
+	static func distance(loc1:Location,_ loc2:Location)->Int{
+		return abs(loc2.x-loc1.x)+abs(loc2.y-loc1.y)
+	}
+	static func direction(loc1:Location,_ loc2:Location)->Double {
+		return atan2(Double(loc2.x-loc1.x) ,Double(loc1.y-loc2.y))
+	}
+}
+func + (lhs:Location,rhs:Location)->Location{
+	return Location(x: lhs.x+rhs.x, y: lhs.y+rhs.y)
+}
 class Soldier: NSObject {
 	var type:SoldierType = .legionary
 	var army:Army = .red
@@ -26,7 +38,6 @@ class Soldier: NSObject {
 	var scuta:Int
 	var pilum:Int
 	var gladius:Int
-	var archerDodged = false
 	init(army:Army,type:SoldierType){
 		self.army = army
 		self.type = type
@@ -36,15 +47,12 @@ class Soldier: NSObject {
 		gladius = Soldier.totalGladiusForType(type)
 	}
 
-	
-	var x:Int = -1
-	var y:Int = -1
+	var location:Location = Location(x: -1, y: -1)
 	
 	weak var view:SoldierView?
 	weak var cell:BattleCell? {
 		return view?.cell
 	}
-	var attackableSoldiers:[Soldier] = []
 	
 	class func totalScutaForType(type:SoldierType)->Int{
 		switch type {

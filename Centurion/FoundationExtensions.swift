@@ -6,7 +6,7 @@
 //
 //
 
-import Foundation
+import UIKit
 
 //Null Pointers
 let nullptr = UnsafeMutablePointer<()>.null()
@@ -28,7 +28,9 @@ extension NSSet{
 func += (inout left:NSMutableSet,right:[AnyObject]){
 	left.addObjectsFromArray(right)
 }
-
+func * (size: CGSize, scale:CGFloat) -> CGSize {
+	return CGSize(width: size.width*scale, height: size.height*scale)
+}
 extension NSIndexSet {
 	var allIndexes:[Int] {
 		var indexes:[Int] = []

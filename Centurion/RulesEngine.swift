@@ -8,14 +8,19 @@
 
 import UIKit
 
+enum Weapon{
+	case Gladius
+	case Pilum
+}
+
 class RulesEngine: NSObject {
 	weak var field:BattleField?
 	weak var game:GameViewController!
 	var redArmy:[Soldier]=[]
 	var blueArmy:[Soldier]=[]
 	var turn = 1
-}
-extension RulesEngine { //Setup
+	
+	//MARK: Setup
 	func createSoldiers(){
 		var archerType:SoldierType
 		if checkPurchaseForProductID(archerProductID) {
@@ -24,33 +29,32 @@ extension RulesEngine { //Setup
 			archerType = .legionary
 		}
 		//Red army
-		redArmy += [game.createSoldier(.cavalry, army: .red, x: 2, y: 9)]
-		redArmy += [game.createSoldier(archerType, army: .red, x: 4, y: 9)]
-		redArmy += [game.createSoldier(archerType, army: .red, x: 6, y: 9)]
-		redArmy += [game.createSoldier(.cavalry, army: .red, x: 8, y: 9)]
-		redArmy += [game.createSoldier(.legionary, army: .red, x: 3, y: 8)]
-		redArmy += [game.createSoldier(.legionary, army: .red, x: 5, y: 8)]
-		redArmy += [game.createSoldier(.legionary, army: .red, x: 7, y: 8)]
-		redArmy += [game.createSoldier(.cavalry, army: .red, x: 2, y: 7)]
-		redArmy += [game.createSoldier(.legionary, army: .red, x: 4, y: 7)]
-		redArmy += [game.createSoldier(.legionary, army: .red, x: 6, y: 7)]
-		redArmy += [game.createSoldier(.cavalry, army: .red, x: 8, y: 7)]
+		redArmy += [game.createSoldier(.cavalry, 	army: .red,		location:Location(x: 2, y: 9))]
+		redArmy += [game.createSoldier(archerType, 	army: .red,		location:Location(x: 4, y: 9))]
+		redArmy += [game.createSoldier(archerType, 	army: .red,		location:Location(x: 6, y: 9))]
+		redArmy += [game.createSoldier(.cavalry, 	army: .red,		location:Location(x: 8, y: 9))]
+		redArmy += [game.createSoldier(.legionary, 	army: .red,		location:Location(x: 3, y: 8))]
+		redArmy += [game.createSoldier(.legionary, 	army: .red,		location:Location(x: 5, y: 8))]
+		redArmy += [game.createSoldier(.legionary, 	army: .red,		location:Location(x: 7, y: 8))]
+		redArmy += [game.createSoldier(.cavalry, 	army: .red,		location:Location(x: 2, y: 7))]
+		redArmy += [game.createSoldier(.legionary, 	army: .red,		location:Location(x: 4, y: 7))]
+		redArmy += [game.createSoldier(.legionary, 	army: .red,		location:Location(x: 6, y: 7))]
+		redArmy += [game.createSoldier(.cavalry, 	army: .red,		location:Location(x: 8, y: 7))]
 		//Blue army
-		blueArmy += [game.createSoldier(.cavalry, army: .blue, x: 2, y: 1)]
-		blueArmy += [game.createSoldier(archerType, army: .blue, x: 4, y: 1)]
-		blueArmy += [game.createSoldier(archerType, army: .blue, x: 6, y: 1)]
-		blueArmy += [game.createSoldier(.cavalry, army: .blue, x: 8, y: 1)]
-		blueArmy += [game.createSoldier(.legionary, army: .blue, x: 3, y: 2)]
-		blueArmy += [game.createSoldier(.legionary, army: .blue, x: 5, y: 2)]
-		blueArmy += [game.createSoldier(.legionary, army: .blue, x: 7, y: 2)]
-		blueArmy += [game.createSoldier(.cavalry, army: .blue, x: 2, y: 3)]
-		blueArmy += [game.createSoldier(.legionary, army: .blue, x: 4, y: 3)]
-		blueArmy += [game.createSoldier(.legionary, army: .blue, x: 6, y: 3)]
-		blueArmy += [game.createSoldier(.cavalry, army: .blue, x: 8, y: 3)]
+		blueArmy += [game.createSoldier(.cavalry, 	army: .blue,	location:Location(x: 2, y: 1))]
+		blueArmy += [game.createSoldier(archerType,	army: .blue,	location:Location(x: 4, y: 1))]
+		blueArmy += [game.createSoldier(archerType,	army: .blue,	location:Location(x: 6, y: 1))]
+		blueArmy += [game.createSoldier(.cavalry, 	army: .blue,	location:Location(x: 8, y: 1))]
+		blueArmy += [game.createSoldier(.legionary,	army: .blue,	location:Location(x: 3, y: 2))]
+		blueArmy += [game.createSoldier(.legionary,	army: .blue,	location:Location(x: 5, y: 2))]
+		blueArmy += [game.createSoldier(.legionary,	army: .blue,	location:Location(x: 7, y: 2))]
+		blueArmy += [game.createSoldier(.cavalry,	army: .blue,	location:Location(x: 2, y: 3))]
+		blueArmy += [game.createSoldier(.legionary,	army: .blue,	location:Location(x: 4, y: 3))]
+		blueArmy += [game.createSoldier(.legionary,	army: .blue,	location:Location(x: 6, y: 3))]
+		blueArmy += [game.createSoldier(.cavalry, 	army: .blue,	location:Location(x: 8, y: 3))]
 	}
-}
-extension RulesEngine { //Health Levels
-	func totalHealthForArmy(army:Army)->Int{
+	//MARK: Health Levels
+	func totalHealthForArmy(	army:Army)->Int{
 		switch army {
 		case .red:	return redArmy.reduce(0) { $0 + Soldier.totalHealthForType($1.type) }
 		case .blue:	return blueArmy.reduce(0) { $0 + Soldier.totalHealthForType($1.type) }
@@ -62,8 +66,7 @@ extension RulesEngine { //Health Levels
 	var blueHealth:Float{
 		return Float(blueArmy.reduce(0) { $0 + $1.health }) / Float(totalHealthForArmy(.blue))
 	}
-}
-extension RulesEngine { //Turn Management
+	//MARK: Turn Management
 	func isTurn(soldier:Soldier)->Bool {
 		return currentArmy == soldier.army
 	}
@@ -88,17 +91,9 @@ extension RulesEngine { //Turn Management
 			game.highlightButtons()
 		}
 	}
-
-}
-extension RulesEngine { //Making Moves
-	enum Weapon{
-		case gladius
-		case pilum
-	}
-	func distanceBetweenSoldiers(soldier1:Soldier,_ soldier2:Soldier)->Int{
-		return abs(soldier1.x-soldier2.x) + abs(soldier1.y-soldier2.y)
-	}
-	func rollGladiusDice(var numRolls:Int)->Int{
+	
+	//MARK: Making Moves
+	private func rollGladiusDice(var numRolls:Int)->Int{
 		if numRolls > 10 { numRolls = 10 }
 		var gladiusDamage = 0
 		for roll in 0 ..< numRolls {
@@ -106,56 +101,50 @@ extension RulesEngine { //Making Moves
 		}
 		return gladiusDamage
 	}
-	func rollPilumDice(var numRolls:Int,range:Int)->Int{
+	private func rollPilumDice(var numRolls:Int,range:Int)->Int{
 		if numRolls > 10 { numRolls = 10 }
 		var pilumDamage = 0
 		for roll in 0 ..< numRolls {
-			if Int(arc4random()%10) >= range { ++pilumDamage }
+			if Int(arc4random()%10) >= 5+abs(range-5) { ++pilumDamage }
 		}
 		return pilumDamage
 	}
-	func rollDefenseDice(var numRolls:Int,useExtraShields:Bool)->(Int,Int){
+	private func rollDefenseDice(var numRolls:Int,useExtraShields:Bool)->(Int,Int){
 		var dodge = 0 , shield = 0
 		for roll in 0 ..< numRolls {
 			let roll = Int(arc4random()%8)
-			if roll >= 6 { ++dodge }
+			if roll >= 7 { ++dodge }
 			else if roll >= 4 { ++shield }
 			else if roll >= 2 && useExtraShields { ++shield }
 		}
 		return (dodge,shield)
 	}
-	func attackSoldier(defender:Soldier, withSoldier attacker:Soldier,weapon:Weapon){
-		//Attacker rolls
+	private func attackerRoll(soldier:Soldier, range:Int, weapon:Weapon)->Int{
 		var hits:Int
 		switch weapon {
-		case .gladius:
-			hits = rollGladiusDice(attacker.gladius)
-			attacker.gladius -= hits
-		case .pilum:
-			var range = distanceBetweenSoldiers(attacker, defender)/2 + 1
-			if attacker.type == .archer {
-				--range
-			}
-			hits = rollPilumDice(attacker.pilum, range: range)
-			attacker.pilum -= 10
-			if attacker.pilum < 0 { attacker.pilum == 0 }
+		case .Gladius:
+			hits = rollGladiusDice(soldier.gladius)
+			soldier.gladius -= hits
+		case .Pilum:
+			hits = rollPilumDice(soldier.pilum, range: range)
+			soldier.pilum -= min(10,soldier.pilum)
 		}
-		//Defender rolls
-		if defender.type == .archer && weapon == .pilum && !defender.archerDodged {
-			defender.archerDodged = true
-			takeTurn()
-			return
-		}
-		let shieldPercent = defender.scuta/Soldier.totalScutaForType(defender.type)
-		var (dodge, shield) = rollDefenseDice(Int(10 - 5*shieldPercent), useExtraShields: weapon == .pilum)
-		if shield > defender.scuta { shield = defender.scuta }
+		return hits
+	}
+	private func defenderRoll(soldier:Soldier,weapon:Weapon)->(Int,Int){
+		let shieldPercent = soldier.scuta/Soldier.totalScutaForType(soldier.type)
+		var (dodge, shield) = rollDefenseDice(Int(5 + 5*shieldPercent), useExtraShields: weapon == .Pilum)
+		shield = min(shield, soldier.scuta)
+		return (dodge,shield)
+	}
+	private func resolveDamage(#hits:Int,dodge:Int,shield:Int,attacker:Soldier,defender:Soldier){
 		//Attack takes effect
-		hits -= dodge
-		if shield > hits {
-			defender.scuta -= hits
+		let undodgedHits = max(hits-dodge,0)
+		if shield > undodgedHits {
+			defender.scuta -= undodgedHits
 		} else {
 			defender.scuta -= shield
-			defender.health -= (hits-shield)
+			defender.health -= 3*(undodgedHits-shield)
 		}
 		//if soldier is dead
 		if defender.health <= 0 {
@@ -171,37 +160,58 @@ extension RulesEngine { //Making Moves
 			game.performSegueWithIdentifier("BlueWins", sender: nil)
 		}
 		takeTurn()
+
 	}
-	func moveSoldier(soldier:Soldier, toX x:Int, toY y:Int){
-		soldier.x = x
-		soldier.y = y
-		takeTurn()
-	}
-}
-extension RulesEngine {//Move validity
-	func soldierCanMove(soldier:Soldier,toX x:Int,toY y:Int)->Bool{
-		if soldier.army != currentArmy { return false }
-		//Out of bounds
-		if x<0 || x>10 || y<0 || y>10 { return false }
-		if (x==0||x==10)&&(y==0||y==10) { return false }
-		//Occupied
-		if field?.cells[x][y].soldier != nil { return false }
-		//out of range
-		let dist = abs(soldier.x-x)+abs(soldier.y-y)
-		switch soldier.type{
-		case .legionary: return dist == 1
-		case .cavalry: return dist <= 2
-		case .archer: return dist == 1
+	func executeMove(move:GameMove){
+		switch move.type{
+		case .Movement:
+			move.soldierAttacker?.location = move.destination!
+			takeTurn()
+		case .Attack(.Gladius):
+			let hits = attackerRoll(move.soldierAttacker!, range: 0, weapon: .Gladius)
+			let (dodge,shield) = defenderRoll(move.soldierDefender!, weapon: .Gladius)
+			resolveDamage(hits: hits, dodge: dodge, shield: shield, attacker: move.soldierAttacker!, defender: move.soldierDefender!)
+		case .Attack(.Pilum):
+			let range = Location.distance(move.soldierAttacker!.location, move.soldierDefender!.location)/2 + 1
+			let hits = attackerRoll(move.soldierAttacker!, range: range, weapon: .Pilum)
+			let (dodge,shield) = defenderRoll(move.soldierDefender!, weapon: .Pilum)
+			resolveDamage(hits: hits, dodge: dodge, shield: shield, attacker: move.soldierAttacker!, defender: move.soldierDefender!)
 		}
 	}
-	func soldier(attacker:Soldier,canAttackSoldier defender:Soldier, weapon:Weapon)->Bool{
-		if attacker.army != currentArmy || attacker.army == defender.army { return false }
-		switch weapon {
-		case .gladius:
-			return attacker.gladius > 0 && distanceBetweenSoldiers(attacker, defender) == 1
-		case .pilum:
-			return attacker.pilum > 0
+	//MAKR: Move validity
+	func moveIsLegal(move:GameMove)->Bool{
+		if let attacker = move.soldierAttacker {
+			if attacker.army != currentArmy || attacker.health <= 0 { return false }
+			switch move.type{
+			case .Movement:
+				if let location = move.destination{
+					//Out of bounds
+					if location.x<0 || location.x>10 || location.y<0 || location.y>10 { return false }
+					if (location.x==0||location.x==10)&&(location.y==0||location.y==10) { return false }
+					//Occupied
+					if field?[location].soldier != nil { return false }
+					//out of range
+					let dist = Location.distance(location, attacker.location)
+					switch attacker.type{
+					case .legionary: return dist <= 1
+					case .cavalry: return dist <= 2
+					case .archer: return dist <= 1
+					}
+				}
+				return false
+			case .Attack(.Pilum):
+				if let enemy = move.soldierDefender {
+					return attacker.pilum > 0 && enemy.army != attacker.army && enemy.health > 0
+				}
+				return false
+			case .Attack(.Gladius):
+				if let enemy = move.soldierDefender {
+					return attacker.gladius > 0 && enemy.army != attacker.army && Location.distance(attacker.location, enemy.location) == 1 && enemy.health > 0
+				}
+				return false
+			}
 		}
+		return false
 	}
 }
 

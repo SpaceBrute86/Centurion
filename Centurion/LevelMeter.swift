@@ -26,12 +26,9 @@ class LevelMeter: UIView {
 		blockView.backgroundColor = backgroundColor
 		addSubview(blockView)
 	}
-	var _percent:Double = 0.0
-	var percent:Double {
-		get { return _percent }
-		set (value) {
-			_percent = value
-			let blockCenter = CGFloat(0.5+_percent)*frame.size.width
+	var percent:Double = 0.0 {
+		didSet {
+			let blockCenter = CGFloat(0.5 + percent)*frame.size.width
 			UIView.animateWithDuration(0.5) {
 				self.blockView.center.x = blockCenter
 			}

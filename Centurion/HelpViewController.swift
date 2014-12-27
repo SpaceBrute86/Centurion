@@ -62,17 +62,17 @@ extension HelpViewController: StoreManagerDelegate, UIAlertViewDelegate {
 			storeManager.confirmPurchase(buttonIndex==1)
 		}
 		func showAlreadyPurchased(productID:String){
-		/*	buyButton.setTitle("PURCHASED!", forState: .Normal)
+			buyButton.setTitle("PURCHASED!", forState: .Normal)
 			buyButton.userInteractionEnabled = false
-			buyButton.hidden = false*/
+			buyButton.hidden = false
 		}
 		func hideButton(productID:String){
-			//buyButton.hidden = true
+			buyButton.hidden = true
 		}
 		func priceDidLoad(price:String,forProduct productID:String){
-			//buyButton.setTitle(price, forState: .Normal)
-			//buyButton.userInteractionEnabled = true
-			//buyButton.hidden = false
+			buyButton.setTitle(price, forState: .Normal)
+			buyButton.userInteractionEnabled = true
+			buyButton.hidden = false
 		}
 		func purchaseSuccessful() {
 			UIAlertView(title: "Purchase Successful!", message: nil, delegate: nil, cancelButtonTitle: "OK").show()
