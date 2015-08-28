@@ -67,17 +67,18 @@ class GameViewController:UIViewController, UIAlertViewDelegate{
 		highlightCells()
 		
 	}
+	override func prefersStatusBarHidden() -> Bool {
+		return true
+	}
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		let destVC = segue.destinationViewController as WinnerViewController
+		let destVC = segue.destinationViewController as! WinnerViewController
 		if segue.identifier == "RedWins" {
 			destVC.winningArmy = .red
 		} else if segue.identifier == "BlueWins" {
 			destVC.winningArmy = .blue
 		}
 	}
-	override func prefersStatusBarHidden() -> Bool {
-		return true
-	}
+
 	@IBAction func quit(sender:AnyObject){
 		UIAlertView(title: "Quit", message: "Are you sure you want to quit?", delegate: self, cancelButtonTitle: "No", otherButtonTitles: "Yes").show()
 	}
@@ -241,7 +242,7 @@ class GameViewController:UIViewController, UIAlertViewDelegate{
 		}
 	}
 	func tapSpace(sender:UIGestureRecognizer){
-		let cell = sender.view  as BattleCell
+		let cell = sender.view  as! BattleCell
 		if let soldier = cell.soldier?.soldier {
 			if soldier.army == rulesEngine.currentArmy {
 				selectedSoldier = soldier

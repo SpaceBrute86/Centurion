@@ -55,7 +55,7 @@ func weaponViewForWeapon(weapon:Weapon,angle:CGFloat, cellSize:CGSize) -> UIImag
 	case .Pilum: img = UIImageView(image: UIImage(named: "Spear.png"))
 	case .Gladius: img = UIImageView(image: UIImage(named: "Sword.png"))
 	}
-	img.frame.size = cellSize * 1.6
+	img.frame.size = CGSize(width: cellSize.width*1.6, height: cellSize.height*1.6)
 	img.opaque = false;
 	img.transform=CGAffineTransformMakeRotation( angle-CGFloat(M_PI_2) )
 	return img

@@ -22,16 +22,10 @@ class RulesEngine: NSObject {
 	
 	//MARK: Setup
 	func createSoldiers(){
-		var archerType:SoldierType
-		if checkPurchaseForProductID(archerProductID) {
-			archerType = .archer
-		} else {
-			archerType = .legionary
-		}
 		//Red army
 		redArmy += [game.createSoldier(.cavalry, 	army: .red,		location:Location(x: 2, y: 9))]
-		redArmy += [game.createSoldier(archerType, 	army: .red,		location:Location(x: 4, y: 9))]
-		redArmy += [game.createSoldier(archerType, 	army: .red,		location:Location(x: 6, y: 9))]
+		redArmy += [game.createSoldier(.archer, 	army: .red,		location:Location(x: 4, y: 9))]
+		redArmy += [game.createSoldier(.archer, 	army: .red,		location:Location(x: 6, y: 9))]
 		redArmy += [game.createSoldier(.cavalry, 	army: .red,		location:Location(x: 8, y: 9))]
 		redArmy += [game.createSoldier(.legionary, 	army: .red,		location:Location(x: 3, y: 8))]
 		redArmy += [game.createSoldier(.legionary, 	army: .red,		location:Location(x: 5, y: 8))]
@@ -42,8 +36,8 @@ class RulesEngine: NSObject {
 		redArmy += [game.createSoldier(.cavalry, 	army: .red,		location:Location(x: 8, y: 7))]
 		//Blue army
 		blueArmy += [game.createSoldier(.cavalry, 	army: .blue,	location:Location(x: 2, y: 1))]
-		blueArmy += [game.createSoldier(archerType,	army: .blue,	location:Location(x: 4, y: 1))]
-		blueArmy += [game.createSoldier(archerType,	army: .blue,	location:Location(x: 6, y: 1))]
+		blueArmy += [game.createSoldier(.archer,	army: .blue,	location:Location(x: 4, y: 1))]
+		blueArmy += [game.createSoldier(.archer,	army: .blue,	location:Location(x: 6, y: 1))]
 		blueArmy += [game.createSoldier(.cavalry, 	army: .blue,	location:Location(x: 8, y: 1))]
 		blueArmy += [game.createSoldier(.legionary,	army: .blue,	location:Location(x: 3, y: 2))]
 		blueArmy += [game.createSoldier(.legionary,	army: .blue,	location:Location(x: 5, y: 2))]
@@ -144,7 +138,7 @@ class RulesEngine: NSObject {
 			defender.scuta -= undodgedHits
 		} else {
 			defender.scuta -= shield
-			defender.health -= 3*(undodgedHits-shield)
+			defender.health -= 5*(undodgedHits-shield)
 		}
 		//if soldier is dead
 		if defender.health <= 0 {

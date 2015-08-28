@@ -14,11 +14,12 @@ class WinnerViewController: UIViewController {
 	@IBOutlet var textLabel:UILabel!
 
 	var winningArmy:Army = .red
-	override func prefersStatusBarHidden() -> Bool {
-		return true
-	}
+
 	@IBAction func done(sender:AnyObject){
 		MenuViewController.dismiss()
+	}
+	override func prefersStatusBarHidden() -> Bool {
+		return true
 	}
     override func viewDidLoad() {
         super.viewDidLoad()
