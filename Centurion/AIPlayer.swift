@@ -24,23 +24,25 @@ struct AIPlayer {
 			}
 			center.x /= enemies.count
 			center.y /= enemies.count
-			
-			let oldDist = abs(move.soldierAttacker!.location.x - center.x) + abs(move.soldierAttacker!.location.y - center.y)
-			let newDist = abs(move.destination!.x - center.x) + abs(move.destination!.y - center.y)
+			guard let attacker = move.soldierAttacker, destination = move.destination else { return 0 }
+			let oldDist = abs(attacker.location.x - center.x) + abs(attacker.location.y - center.y)
+			let newDist = abs(destination.x - center.x) + abs(destination.y - center.y)
 			return oldDist > newDist ? oldDist-newDist/2 : 0
 		case .Attack(.Gladius):
-			let hits = min(move.soldierAttacker!.gladius, 10) * 5/8
-			let enemyRolls = Int(10 - 5*(move.soldierDefender!.scuta/Soldier.totalScutaForType(move.soldierDefender!.type)))
+			guard let attacker = move.soldierAttacker, defender = move.soldierDefender else { return 0 }
+			let hits = min(attacker.gladius, 10) * 5/8
+			let enemyRolls = Int(10 - 5*(defender.scuta/Soldier.totalScutaForType(defender.type)))
 			let dodge = enemyRolls * 2/8
-			let shield = min(move.soldierDefender!.scuta, enemyRolls * 2/8)
+			let shield = min(defender.scuta, enemyRolls * 2/8)
 			return (hits - dodge - shield/2) * 2
 		case .Attack(.Pilum):
-			var range = Location.distance(move.soldierAttacker!.location, move.soldierDefender!.location)/2 + 1
-			if move.soldierAttacker!.type == .archer { --range }
-			let hits = min(move.soldierAttacker!.pilum, 10) * (5-abs(range-5))/10
-			let enemyRolls = Int(5 + 5*(move.soldierDefender!.scuta/Soldier.totalScutaForType(move.soldierDefender!.type)))
+			guard let attacker = move.soldierAttacker, defender = move.soldierDefender else { return 0 }
+			var range = Location.distance(attacker.location, defender.location)/2 + 1
+			if attacker.type == .archer { --range }
+			let hits = min(attacker.pilum, 10) * (5-abs(range-5))/10
+			let enemyRolls = Int(5 + 5*(defender.scuta/Soldier.totalScutaForType(defender.type)))
 			let dodge = enemyRolls * 2/8
-			let shield = min(move.soldierDefender!.scuta, enemyRolls * 4/8)
+			let shield = min(defender.scuta, enemyRolls * 4/8)
 			return (hits - dodge - shield/2)
 		}
 	}

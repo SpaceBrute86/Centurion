@@ -11,20 +11,20 @@ import iAd
 
 class HelpViewController: UIViewController, UIScrollViewDelegate{
 
-	@IBOutlet var pageView:UIScrollView!
-	@IBOutlet var pageControl:UIPageControl!
-	@IBOutlet var ad:ADBannerView!
+	@IBOutlet var pageView:UIScrollView?
+	@IBOutlet var pageControl:UIPageControl?
+	@IBOutlet var ad:ADBannerView?
 
 	func scrollViewDidEndDecelerating(scrollView:UIScrollView){
 		let pageWidth = scrollView.frame.size.width
 		let page = Int(floor((scrollView.contentOffset.x - pageWidth/2)/pageWidth)+1)
-		pageControl.currentPage = page
+		pageControl?.currentPage = page
 	}
 	override func prefersStatusBarHidden() -> Bool {
 		return true
 	}
 	override func viewDidAppear(animated: Bool) {
-		pageView.contentSize = CGSize(width: pageView.frame.size.width*6, height: pageView.frame.size.height)
+		pageView?.contentSize = CGSize(width: (pageView?.frame.size.width ?? 0) * 6, height: pageView?.frame.size.height ?? 0)
 	}
 	@IBAction func dimiss(sender:AnyObject){
 		dismissViewControllerAnimated(true, completion: nil)
@@ -33,10 +33,10 @@ class HelpViewController: UIViewController, UIScrollViewDelegate{
 }
 
 extension HelpViewController: ADBannerViewDelegate {
-	func bannerViewDidLoadAd(banner: ADBannerView!) {
-		ad.hidden = false
+	func bannerViewDidLoadAd(banner: ADBannerView?) {
+		ad?.hidden = false
 	}
-	func bannerView(banner: ADBannerView!, didFailToReceiveAdWithError error: NSError!) {
-		ad.hidden = true
+	func bannerView(banner: ADBannerView?, didFailToReceiveAdWithError error: NSError?) {
+		ad?.hidden = true
 	}
 }

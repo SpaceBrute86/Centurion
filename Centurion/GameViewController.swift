@@ -9,30 +9,30 @@
 import UIKit
 
 class GameViewController:UIViewController, UIAlertViewDelegate{
-	@IBOutlet var blueControl:UIView!
-	@IBOutlet var battleField:BattleField!
+	@IBOutlet var blueControl:UIView?
+	@IBOutlet var battleField:BattleField?
 	
-	@IBOutlet var bluePilumButton:UIButton!
-	@IBOutlet var redPilumButton:UIButton!
-	@IBOutlet var blueGladiusButton:UIButton!
-	@IBOutlet var redGladiusButton:UIButton!
+	@IBOutlet var bluePilumButton:UIButton?
+	@IBOutlet var redPilumButton:UIButton?
+	@IBOutlet var blueGladiusButton:UIButton?
+	@IBOutlet var redGladiusButton:UIButton?
 	
-	@IBOutlet var blueScutaMeter:LevelMeter!
-	@IBOutlet var redScutaMeter:LevelMeter!
-	@IBOutlet var bluePilumMeter:LevelMeter!
-	@IBOutlet var redPilumMeter:LevelMeter!
-	@IBOutlet var blueGladiusMeter:LevelMeter!
-	@IBOutlet var redGladiusMeter:LevelMeter!
-	@IBOutlet var blueMeterBlock:UIView!
-	@IBOutlet var redMeterBlock:UIView!
+	@IBOutlet var blueScutaMeter:LevelMeter?
+	@IBOutlet var redScutaMeter:LevelMeter?
+	@IBOutlet var bluePilumMeter:LevelMeter?
+	@IBOutlet var redPilumMeter:LevelMeter?
+	@IBOutlet var blueGladiusMeter:LevelMeter?
+	@IBOutlet var redGladiusMeter:LevelMeter?
+	@IBOutlet var blueMeterBlock:UIView?
+	@IBOutlet var redMeterBlock:UIView?
 	
-	@IBOutlet var redHealthOnRed:UIProgressView!
-	@IBOutlet var redHealthOnBlue:UIProgressView!
-	@IBOutlet var blueHealthOnRed:UIProgressView!
-	@IBOutlet var blueHealthOnBlue:UIProgressView!
+	@IBOutlet var redHealthOnRed:UIProgressView?
+	@IBOutlet var redHealthOnBlue:UIProgressView?
+	@IBOutlet var blueHealthOnRed:UIProgressView?
+	@IBOutlet var blueHealthOnBlue:UIProgressView?
 	
-	@IBOutlet var redHelmet:UIImageView!
-	@IBOutlet var blueHelmet:UIImageView!
+	@IBOutlet var redHelmet:UIImageView?
+	@IBOutlet var blueHelmet:UIImageView?
 	
 	var isSingle = false
 	var rulesEngine = RulesEngine()
@@ -47,18 +47,18 @@ class GameViewController:UIViewController, UIAlertViewDelegate{
 		rulesEngine.field = battleField
 		//Interface
 		let rotation = CGAffineTransformMakeRotation(CGFloat(M_PI))
-		blueControl.transform = rotation
-		bluePilumButton.transform = rotation
-		blueGladiusButton.transform = rotation
+		blueControl?.transform = rotation
+		bluePilumButton?.transform = rotation
+		blueGladiusButton?.transform = rotation
 	}
 	override func viewDidAppear(animated: Bool) {
 		//set up icon progress bars
-		redScutaMeter.setup(UIImage(named: "shield.png"))
-		blueScutaMeter.setup(UIImage(named: "shield.png"))
-		redPilumMeter.setup(UIImage(named: "Spear_graphic.png"))
-		bluePilumMeter.setup( UIImage(named: "Spear_graphic.png"))
-		redGladiusMeter.setup( UIImage(named: "Sword_graphic.png"))
-		blueGladiusMeter.setup( UIImage(named: "Sword_graphic.png"))
+		redScutaMeter?.setup(UIImage(named: "shield.png"))
+		blueScutaMeter?.setup(UIImage(named: "shield.png"))
+		redPilumMeter?.setup(UIImage(named: "Spear_graphic.png"))
+		bluePilumMeter?.setup( UIImage(named: "Spear_graphic.png"))
+		redGladiusMeter?.setup( UIImage(named: "Sword_graphic.png"))
+		blueGladiusMeter?.setup( UIImage(named: "Sword_graphic.png"))
 		//Initialize AI
 		if isSingle {
 			intelligence = AIPlayer(rules: rulesEngine)
@@ -71,11 +71,11 @@ class GameViewController:UIViewController, UIAlertViewDelegate{
 		return true
 	}
 	override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-		let destVC = segue.destinationViewController as! WinnerViewController
+		let destVC = segue.destinationViewController as? WinnerViewController
 		if segue.identifier == "RedWins" {
-			destVC.winningArmy = .red
+			destVC?.winningArmy = .red
 		} else if segue.identifier == "BlueWins" {
-			destVC.winningArmy = .blue
+			destVC?.winningArmy = .blue
 		}
 	}
 
@@ -90,18 +90,18 @@ class GameViewController:UIViewController, UIAlertViewDelegate{
 //MARK: Loading Field
 	
 	func createSoldier(type:SoldierType,army:Army,location:Location)->Soldier{
-		let cellSize = battleField[location].frame.size
+		let cellSize = battleField?[location].frame.size ?? CGSize()
 		let soldierView = SoldierView(frame: CGRect(origin: CGPoint(), size: cellSize), army: army, type: type)
 		let soldier = soldierView.soldier
 		soldier.location = location
-		soldierView.cell = battleField[location]
-		battleField[location].soldier = soldierView
-		battleField[location].addSubview(soldierView)
+		soldierView.cell = battleField?[location]
+		battleField?[location].soldier = soldierView
+		battleField?[location].addSubview(soldierView)
 		return soldier
 	}
 	func loadField(){
-		battleField.createField()
-		for cell in battleField.gameCells {
+		battleField?.createField()
+		for cell in battleField?.gameCells ?? [] {
 			let tap = UITapGestureRecognizer(target: self, action: "tapSpace:")
 			cell.addGestureRecognizer(tap)
 		}
@@ -113,16 +113,29 @@ class GameViewController:UIViewController, UIAlertViewDelegate{
 		let selectableColor = UIColor(red: 0, green: 0.7, blue: 0, alpha: 1)
 		let selectedEnemyColor = UIColor(red: 0, green: 0.8, blue: 0, alpha: 1)
 		let selectedColor = UIColor(red: 0, green: 1, blue: 0, alpha: 1)
-		for cell in battleField.gameCells {
+		for cell in battleField?.gameCells ?? [] {
 			if animating{
 				cell.backgroundColor = normalColor
-			} else if selectedSoldier == nil || !rulesEngine.isTurn(selectedSoldier!) {
-				if cell.soldier == nil {
+			} else if let selectedSoldier = selectedSoldier where rulesEngine.isTurn(selectedSoldier) {
+				if cell.soldier?.soldier == selectedSoldier {
+					cell.backgroundColor = selectedColor
+				} else {
+					var move:GameMove
+					if let weapon = selectedWeapon {
+						move = GameMove(type: .Attack(weapon), soldierAttacker: selectedSoldier, soldierDefender: cell.soldier?.soldier, destination: nil)
+					} else {
+						move = GameMove(type: .Movement, soldierAttacker: selectedSoldier, soldierDefender: nil, destination: cell.location)
+					}
+					cell.backgroundColor = rulesEngine.moveIsLegal(move) ? selectableColor : normalColor
+				}
+			} else {
+				guard let soldier = cell.soldier?.soldier else {
 					cell.backgroundColor = normalColor
-				} else if cell.soldier?.soldier == selectedSoldier {
+					continue
+				}
+				if soldier == selectedSoldier {
 					cell.backgroundColor = selectedEnemyColor
 				} else {
-					let soldier = cell.soldier!.soldier
 					switch selectedWeapon {
 					case .None:
 						if rulesEngine.isTurn(soldier) {
@@ -144,57 +157,45 @@ class GameViewController:UIViewController, UIAlertViewDelegate{
 						}
 					}
 				}
-			} else {
-				if cell.soldier?.soldier == selectedSoldier {
-					cell.backgroundColor = selectedColor
-				} else {
-					var move:GameMove
-					if selectedWeapon == nil {
-						move = GameMove(type: .Movement, soldierAttacker: selectedSoldier!, soldierDefender: nil, destination: cell.location)
-					} else {
-						move = GameMove(type: .Attack(selectedWeapon!), soldierAttacker: selectedSoldier!, soldierDefender: cell.soldier?.soldier, destination: nil)
-					}
-					cell.backgroundColor = rulesEngine.moveIsLegal(move) ? selectableColor : normalColor
-				}
 			}
 		}
 	}
 	func highlightHelmet(){
-		redHelmet.highlighted = rulesEngine.currentArmy == .red
-		blueHelmet.highlighted = rulesEngine.currentArmy == .blue
+		redHelmet?.highlighted = rulesEngine.currentArmy == .red
+		blueHelmet?.highlighted = rulesEngine.currentArmy == .blue
 	}
 	func highlightButtons() {
 		let pilumDis = UIImage(named:"PilumDis.png")
 		let gladiusDis = UIImage(named:"GladiusDis.png")
 		let pilum = UIImage(named:"Pilum.png")
 		let gladius = UIImage(named:"Gladius.png")
-		bluePilumButton.setImage( pilumDis, forState: .Normal)
-		blueGladiusButton.setImage( gladiusDis, forState: .Normal)
-		redPilumButton.setImage( pilumDis, forState: .Normal)
-		redGladiusButton.setImage( gladiusDis, forState: .Normal)
+		bluePilumButton?.setImage( pilumDis, forState: .Normal)
+		blueGladiusButton?.setImage( gladiusDis, forState: .Normal)
+		redPilumButton?.setImage( pilumDis, forState: .Normal)
+		redGladiusButton?.setImage( gladiusDis, forState: .Normal)
 		
 		switch (rulesEngine.currentArmy,selectedWeapon) {
-		case (.red,.Some(.Gladius)): redGladiusButton.setImage( gladius, forState:.Normal)
-		case (.red,.Some(.Pilum)): redPilumButton.setImage( pilum, forState:.Normal)
-		case (.blue,.Some(.Gladius)): blueGladiusButton.setImage( gladius, forState:.Normal)
-		case (.blue,.Some(.Pilum)): bluePilumButton.setImage( pilum, forState:.Normal)
+		case (.red,.Some(.Gladius)): redGladiusButton?.setImage( gladius, forState:.Normal)
+		case (.red,.Some(.Pilum)): redPilumButton?.setImage( pilum, forState:.Normal)
+		case (.blue,.Some(.Gladius)): blueGladiusButton?.setImage( gladius, forState:.Normal)
+		case (.blue,.Some(.Pilum)): bluePilumButton?.setImage( pilum, forState:.Normal)
 		default: break
 		}
 	}
 	func showMeterLevelsForSoldier(soldierView:SoldierView?){
 		guard let soldier = soldierView?.soldier else {
-			redMeterBlock.hidden = false
-			blueMeterBlock.hidden = false
+			redMeterBlock?.hidden = false
+			blueMeterBlock?.hidden = false
 			return
 		}
-		redMeterBlock.hidden = true
-		blueMeterBlock.hidden = true
-		redScutaMeter.percent = Double (soldier.scuta) / Double(Soldier.totalScutaForType(soldier.type))
-		blueScutaMeter.percent = Double (soldier.scuta) / Double(Soldier.totalScutaForType(soldier.type))
-		redPilumMeter.percent = Double (soldier.pilum) / Double(Soldier.totalPilumForType(soldier.type))
-		bluePilumMeter.percent = Double (soldier.pilum) / Double(Soldier.totalPilumForType(soldier.type))
-		redGladiusMeter.percent = Double (soldier.gladius) / Double(Soldier.totalGladiusForType(soldier.type))
-		blueGladiusMeter.percent = Double (soldier.gladius) / Double(Soldier.totalGladiusForType(soldier.type))
+		redMeterBlock?.hidden = true
+		blueMeterBlock?.hidden = true
+		redScutaMeter?.percent = Double (soldier.scuta) / Double(Soldier.totalScutaForType(soldier.type))
+		blueScutaMeter?.percent = Double (soldier.scuta) / Double(Soldier.totalScutaForType(soldier.type))
+		redPilumMeter?.percent = Double (soldier.pilum) / Double(Soldier.totalPilumForType(soldier.type))
+		bluePilumMeter?.percent = Double (soldier.pilum) / Double(Soldier.totalPilumForType(soldier.type))
+		redGladiusMeter?.percent = Double (soldier.gladius) / Double(Soldier.totalGladiusForType(soldier.type))
+		blueGladiusMeter?.percent = Double (soldier.gladius) / Double(Soldier.totalGladiusForType(soldier.type))
 	}
 //MARK: Game controls
 	
@@ -224,11 +225,11 @@ class GameViewController:UIViewController, UIAlertViewDelegate{
 		return .Attack(weapon)
 	}
 	func tapSpace(sender:UIGestureRecognizer){
-		let cell = sender.view  as! BattleCell
-		if let soldier = cell.soldier?.soldier {
+		let cell = sender.view  as? BattleCell
+		if let soldier = cell?.soldier?.soldier {
 			if soldier.army == rulesEngine.currentArmy {
 				selectedSoldier = soldier
-				showMeterLevelsForSoldier(cell.soldier)
+				showMeterLevelsForSoldier(cell?.soldier)
 				highlightCells()
 			} else {
 				let move = GameMove(type: moveType, soldierAttacker: selectedSoldier, soldierDefender: soldier, destination: nil)
@@ -236,12 +237,12 @@ class GameViewController:UIViewController, UIAlertViewDelegate{
 					runMove(move)
 				} else {
 					selectedSoldier = soldier
-					showMeterLevelsForSoldier(cell.soldier)
+					showMeterLevelsForSoldier(cell?.soldier)
 					highlightCells()
 				}
 			}
 		} else {
-			let move = GameMove(type: moveType, soldierAttacker: selectedSoldier, soldierDefender: nil, destination: cell.location)
+			let move = GameMove(type: moveType, soldierAttacker: selectedSoldier, soldierDefender: nil, destination: cell?.location)
 			if rulesEngine.moveIsLegal(move) {
 				runMove(move)
 			} else {
@@ -261,7 +262,7 @@ class GameViewController:UIViewController, UIAlertViewDelegate{
 		if let soldier = piece as? SoldierView {
 			soldier.removeFromSuperview()
 		}
-		battleField.addSubview(piece)
+		battleField?.addSubview(piece)
 		piece.center = fromCell.center
 		UIView.animateWithDuration(duration, animations: {
 			piece.center = toCell.center
@@ -280,27 +281,30 @@ class GameViewController:UIViewController, UIAlertViewDelegate{
 		
 	}
 	func runMove(move:GameMove){
-		var piece:UIView
-		let fromCell = move.soldierAttacker!.cell!
-		var toCell:BattleCell
+		guard let battleField = battleField else { return }
+		let piece:UIView?
+		let fromCell = move.soldierAttacker?.cell
+		let toCell:BattleCell?
 		var duration:Double
 		switch move.type {
 		case .Movement:
+			guard let location = move.destination else { return }
 			duration = 0.7
-			toCell = battleField[move.destination!]
-			piece = move.soldierAttacker!.view!
+			toCell = battleField[location]
+			piece = move.soldierAttacker?.view
 		case .Attack(.Gladius):
 			duration = 1
-			toCell = move.soldierDefender!.cell!
-			let weaponAngle =  CGFloat( Location.direction(fromCell.location, toCell.location) )
-			piece = weaponViewForWeapon(.Gladius, angle: weaponAngle, cellSize: fromCell.frame.size )
+			toCell = move.soldierDefender?.cell
+			let weaponAngle =  CGFloat( Location.direction(fromCell?.location ?? Location(x:0,y:0), toCell?.location ?? Location(x:0,y:0)) )
+			piece = weaponViewForWeapon(.Gladius, angle: weaponAngle, cellSize: fromCell?.frame.size ?? CGSize() )
 		case .Attack(.Pilum):
 			duration = 2
-			toCell = move.soldierDefender!.cell!
-			let weaponAngle =  CGFloat( Location.direction(fromCell.location, toCell.location) )
-			piece = weaponViewForWeapon(.Pilum, angle: weaponAngle, cellSize: fromCell.frame.size )
+			toCell = move.soldierDefender?.cell
+			let weaponAngle =  CGFloat( Location.direction(fromCell?.location ?? Location(x:0,y:0), toCell?.location ?? Location(x:0,y:0) ) )
+			piece = weaponViewForWeapon(Weapon.Pilum, angle: weaponAngle, cellSize: fromCell?.frame.size ?? CGSize() )
 		}
-		movePiece(piece, fromCell: fromCell, toCell: toCell, duration: duration){
+		guard let obj = piece, from = fromCell, to = toCell else { return }
+		movePiece(obj, fromCell: from, toCell: to, duration: duration){
 			self.rulesEngine.executeMove(move)
 			if self.isSingle && self.rulesEngine.currentArmy == .blue {
 				self.intelligence?.chooseMove(self.runMove)
@@ -312,10 +316,10 @@ class GameViewController:UIViewController, UIAlertViewDelegate{
 	func showHealth(soldier:Soldier,redTotal red:Float,blueTotal blue:Float){
 		soldier.view?.healthBar.progress = Float(soldier.health) / Float(Soldier.totalHealthForType(soldier.type))
 		UIView.animateWithDuration(1){
-			self.blueHealthOnBlue.progress = blue
-			self.blueHealthOnRed.progress = blue
-			self.redHealthOnBlue.progress = red
-			self.redHealthOnRed.progress = red
+			self.blueHealthOnBlue?.progress = blue
+			self.blueHealthOnRed?.progress = blue
+			self.redHealthOnBlue?.progress = red
+			self.redHealthOnRed?.progress = red
 		}
 	}
 	func killSoldier(soldier:Soldier){

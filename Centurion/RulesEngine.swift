@@ -15,13 +15,14 @@ enum Weapon{
 
 class RulesEngine: NSObject {
 	weak var field:BattleField?
-	weak var game:GameViewController!
+	weak var game:GameViewController?
 	var redArmy:[Soldier]=[]
 	var blueArmy:[Soldier]=[]
 	var turn = 1
 	
 	//MARK: Setup
 	func createSoldiers(){
+		guard let game = game else { return }
 		//Red army
 		redArmy += [game.createSoldier(.cavalry, 	army: .red,		location:Location(x: 2, y: 9))]
 		redArmy += [game.createSoldier(.archer, 	army: .red,		location:Location(x: 4, y: 9))]
@@ -77,13 +78,12 @@ class RulesEngine: NSObject {
 	func takeTurn() {
 		++turn;
 		turn %= 4
-		if isFirstMove {
-			game.selectedSoldier = nil
-			game.selectedWeapon = nil
-			game.highlightCells()
-			game.highlightHelmet()
-			game.highlightButtons()
-		}
+		guard isFirstMove, let game = game else { return }
+		game.selectedSoldier = nil
+		game.selectedWeapon = nil
+		game.highlightCells()
+		game.highlightHelmet()
+		game.highlightButtons()
 	}
 	
 	//MARK: Making Moves
@@ -142,16 +142,16 @@ class RulesEngine: NSObject {
 		}
 		//if soldier is dead
 		if defender.health <= 0 {
-			game.killSoldier(defender)
+			game?.killSoldier(defender)
 		}
 		//show health
 		let red = redHealth, blue = blueHealth
-		game.showHealth(defender, redTotal: red, blueTotal: blue)
+		game?.showHealth(defender, redTotal: red, blueTotal: blue)
 		//detect victory
 		if blue <= 0.25 && blue < red/2 {
-			game.performSegueWithIdentifier("RedWins", sender: self)
+			game?.performSegueWithIdentifier("RedWins", sender: self)
 		} else if red <= 0.25 && red < blue/2 {
-			game.performSegueWithIdentifier("BlueWins", sender: nil)
+			game?.performSegueWithIdentifier("BlueWins", sender: nil)
 		}
 		takeTurn()
 		
@@ -159,17 +159,20 @@ class RulesEngine: NSObject {
 	func executeMove(move:GameMove){
 		switch move.type{
 		case .Movement:
-			move.soldierAttacker?.location = move.destination!
+			guard let destination = move.destination else { break }
+			move.soldierAttacker?.location = destination
 			takeTurn()
 		case .Attack(.Gladius):
-			let hits = attackerRoll(move.soldierAttacker!, range: 0, weapon: .Gladius)
-			let (dodge,shield) = defenderRoll(move.soldierDefender!, weapon: .Gladius)
-			resolveDamage(hits: hits, dodge: dodge, shield: shield, attacker: move.soldierAttacker!, defender: move.soldierDefender!)
+			guard let attacker = move.soldierAttacker, defender = move.soldierDefender else { break }
+			let hits = attackerRoll(attacker, range: 0, weapon: .Gladius)
+			let (dodge,shield) = defenderRoll(defender, weapon: .Gladius)
+			resolveDamage(hits: hits, dodge: dodge, shield: shield, attacker: attacker, defender: defender)
 		case .Attack(.Pilum):
-			let range = Location.distance(move.soldierAttacker!.location, move.soldierDefender!.location)/2 + 1
-			let hits = attackerRoll(move.soldierAttacker!, range: range, weapon: .Pilum)
-			let (dodge,shield) = defenderRoll(move.soldierDefender!, weapon: .Pilum)
-			resolveDamage(hits: hits, dodge: dodge, shield: shield, attacker: move.soldierAttacker!, defender: move.soldierDefender!)
+			guard let attacker = move.soldierAttacker, defender = move.soldierDefender else { break }
+			let range = Location.distance(attacker.location, defender.location)/2 + 1
+			let hits = attackerRoll(attacker, range: range, weapon: .Pilum)
+			let (dodge,shield) = defenderRoll(defender, weapon: .Pilum)
+			resolveDamage(hits: hits, dodge: dodge, shield: shield, attacker: attacker, defender: defender)
 		}
 	}
 	//MAKR: Move validity

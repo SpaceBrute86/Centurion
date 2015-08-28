@@ -9,7 +9,7 @@
 import UIKit
 
 class LevelMeter: UIView {
-	var blockView:UIView!
+	var blockView:UIView?
 	func setup(image:UIImage?) {
 		//Create Image Views
 		let imgSize = frame.size.height
@@ -23,14 +23,14 @@ class LevelMeter: UIView {
 		}
 		//Create Block View
 		blockView = UIView(frame: CGRect(x: frame.size.width, y: 0.0, width: frame.size.width, height: frame.size.height))
-		blockView.backgroundColor = backgroundColor
-		addSubview(blockView)
+		blockView?.backgroundColor = backgroundColor
+		addSubview(blockView ?? UIView())
 	}
 	var percent:Double = 0.0 {
 		didSet {
 			let blockCenter = CGFloat(0.5 + percent)*frame.size.width
 			UIView.animateWithDuration(0.5) {
-				self.blockView.center.x = blockCenter
+				self.blockView?.center.x = blockCenter
 			}
 		}
 	}

@@ -10,9 +10,9 @@ import UIKit
 
 class WinnerViewController: UIViewController {
 	
-	@IBOutlet var imageView:UIImageView!
-	@IBOutlet var textLabel:UILabel!
-
+	@IBOutlet var imageView:UIImageView?
+	@IBOutlet var textLabel:UILabel?
+	
 	var winningArmy:Army = .red
 
 	@IBAction func done(sender:AnyObject){
@@ -25,11 +25,11 @@ class WinnerViewController: UIViewController {
         super.viewDidLoad()
 		switch winningArmy {
 		case .red:
-			imageView.image = UIImage(named: "RedHelmet.png")
-			textLabel.text = "Red Wins"
+			imageView?.image = UIImage(named: "RedHelmet.png")
+			textLabel?.text = "Red Wins"
 		case .blue:
-			imageView.image = UIImage(named: "BlueHelmet.png")
-			textLabel.text = "Blue Wins"
+			imageView?.image = UIImage(named: "BlueHelmet.png")
+			textLabel?.text = "Blue Wins"
 			view.transform = CGAffineTransformMake(-1, 0, 0, -1, 0, 0)
 		}
     }
