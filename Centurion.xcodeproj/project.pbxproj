@@ -12,25 +12,6 @@
 		E70D69B11A279D87001B380F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E70D69AF1A279D87001B380F /* Main.storyboard */; };
 		E70D69B31A279D87001B380F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E70D69B21A279D87001B380F /* Images.xcassets */; };
 		E70D69CC1A279E43001B380F /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E70D69CB1A279E43001B380F /* Launch Screen.xib */; };
-		E70D69DA1A279F0E001B380F /* BlueArcher.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D01A279F0E001B380F /* BlueArcher.png */; };
-		E70D69DB1A279F0E001B380F /* BlueCavalry.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D11A279F0E001B380F /* BlueCavalry.png */; };
-		E70D69DC1A279F0E001B380F /* BlueHelmet.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D21A279F0E001B380F /* BlueHelmet.png */; };
-		E70D69DD1A279F0E001B380F /* BlueHelmetHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D31A279F0E001B380F /* BlueHelmetHighlight.png */; };
-		E70D69DE1A279F0E001B380F /* BlueLegion.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D41A279F0E001B380F /* BlueLegion.png */; };
-		E70D69DF1A279F0E001B380F /* RedArcher.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D51A279F0E001B380F /* RedArcher.png */; };
-		E70D69E01A279F0E001B380F /* RedCavalry.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D61A279F0E001B380F /* RedCavalry.png */; };
-		E70D69E11A279F0E001B380F /* RedHelmet.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D71A279F0E001B380F /* RedHelmet.png */; };
-		E70D69E21A279F0E001B380F /* RedHelmetHighlight.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D81A279F0E001B380F /* RedHelmetHighlight.png */; };
-		E70D69E31A279F0E001B380F /* RedLegion.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69D91A279F0E001B380F /* RedLegion.png */; };
-		E70D69ED1A279F35001B380F /* Gladius.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69E41A279F35001B380F /* Gladius.png */; };
-		E70D69EE1A279F35001B380F /* GladiusDis.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69E51A279F35001B380F /* GladiusDis.png */; };
-		E70D69EF1A279F35001B380F /* Pilum.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69E61A279F35001B380F /* Pilum.png */; };
-		E70D69F01A279F35001B380F /* PilumDis.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69E71A279F35001B380F /* PilumDis.png */; };
-		E70D69F11A279F35001B380F /* shield.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69E81A279F35001B380F /* shield.png */; };
-		E70D69F21A279F35001B380F /* Spear_graphic.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69E91A279F35001B380F /* Spear_graphic.png */; };
-		E70D69F31A279F35001B380F /* Spear.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69EA1A279F35001B380F /* Spear.png */; };
-		E70D69F41A279F35001B380F /* Sword_graphic.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69EB1A279F35001B380F /* Sword_graphic.png */; };
-		E70D69F51A279F35001B380F /* Sword.png in Resources */ = {isa = PBXBuildFile; fileRef = E70D69EC1A279F35001B380F /* Sword.png */; };
 		E73D00401A2A294400784672 /* GameMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73D003F1A2A294400784672 /* GameMove.swift */; };
 		E75F97911A28FD4200E444CA /* WinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75F97901A28FD4200E444CA /* WinnerViewController.swift */; };
 		E75F97931A2914B200E444CA /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E75F97921A2914B200E444CA /* HelpViewController.swift */; };
@@ -51,25 +32,6 @@
 		E70D69B01A279D87001B380F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E70D69B21A279D87001B380F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E70D69CB1A279E43001B380F /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
-		E70D69D01A279F0E001B380F /* BlueArcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueArcher.png; sourceTree = "<group>"; };
-		E70D69D11A279F0E001B380F /* BlueCavalry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueCavalry.png; sourceTree = "<group>"; };
-		E70D69D21A279F0E001B380F /* BlueHelmet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueHelmet.png; sourceTree = "<group>"; };
-		E70D69D31A279F0E001B380F /* BlueHelmetHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueHelmetHighlight.png; sourceTree = "<group>"; };
-		E70D69D41A279F0E001B380F /* BlueLegion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueLegion.png; sourceTree = "<group>"; };
-		E70D69D51A279F0E001B380F /* RedArcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedArcher.png; sourceTree = "<group>"; };
-		E70D69D61A279F0E001B380F /* RedCavalry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedCavalry.png; sourceTree = "<group>"; };
-		E70D69D71A279F0E001B380F /* RedHelmet.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedHelmet.png; sourceTree = "<group>"; };
-		E70D69D81A279F0E001B380F /* RedHelmetHighlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedHelmetHighlight.png; sourceTree = "<group>"; };
-		E70D69D91A279F0E001B380F /* RedLegion.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedLegion.png; sourceTree = "<group>"; };
-		E70D69E41A279F35001B380F /* Gladius.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Gladius.png; sourceTree = "<group>"; };
-		E70D69E51A279F35001B380F /* GladiusDis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GladiusDis.png; sourceTree = "<group>"; };
-		E70D69E61A279F35001B380F /* Pilum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Pilum.png; sourceTree = "<group>"; };
-		E70D69E71A279F35001B380F /* PilumDis.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PilumDis.png; sourceTree = "<group>"; };
-		E70D69E81A279F35001B380F /* shield.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shield.png; sourceTree = "<group>"; };
-		E70D69E91A279F35001B380F /* Spear_graphic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spear_graphic.png; sourceTree = "<group>"; };
-		E70D69EA1A279F35001B380F /* Spear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spear.png; sourceTree = "<group>"; };
-		E70D69EB1A279F35001B380F /* Sword_graphic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sword_graphic.png; sourceTree = "<group>"; };
-		E70D69EC1A279F35001B380F /* Sword.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Sword.png; sourceTree = "<group>"; };
 		E73D003F1A2A294400784672 /* GameMove.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameMove.swift; sourceTree = "<group>"; };
 		E75F97901A28FD4200E444CA /* WinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinnerViewController.swift; sourceTree = "<group>"; };
 		E75F97921A2914B200E444CA /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
@@ -116,7 +78,6 @@
 				E70D69AF1A279D87001B380F /* Main.storyboard */,
 				E70D69B21A279D87001B380F /* Images.xcassets */,
 				E70D69CB1A279E43001B380F /* Launch Screen.xib */,
-				E70D69CF1A279EF4001B380F /* Images */,
 				E70D69F91A279F96001B380F /* Menu */,
 				E7E7C3401A27AD77005F3582 /* Game UI */,
 				E7E7C3491A27C2FB005F3582 /* Game Logic */,
@@ -132,32 +93,6 @@
 				E70D69AA1A279D87001B380F /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		E70D69CF1A279EF4001B380F /* Images */ = {
-			isa = PBXGroup;
-			children = (
-				E70D69D01A279F0E001B380F /* BlueArcher.png */,
-				E70D69D11A279F0E001B380F /* BlueCavalry.png */,
-				E70D69D21A279F0E001B380F /* BlueHelmet.png */,
-				E70D69D31A279F0E001B380F /* BlueHelmetHighlight.png */,
-				E70D69D41A279F0E001B380F /* BlueLegion.png */,
-				E70D69D51A279F0E001B380F /* RedArcher.png */,
-				E70D69D61A279F0E001B380F /* RedCavalry.png */,
-				E70D69D71A279F0E001B380F /* RedHelmet.png */,
-				E70D69D81A279F0E001B380F /* RedHelmetHighlight.png */,
-				E70D69D91A279F0E001B380F /* RedLegion.png */,
-				E70D69E41A279F35001B380F /* Gladius.png */,
-				E70D69E51A279F35001B380F /* GladiusDis.png */,
-				E70D69E61A279F35001B380F /* Pilum.png */,
-				E70D69E71A279F35001B380F /* PilumDis.png */,
-				E70D69E81A279F35001B380F /* shield.png */,
-				E70D69E91A279F35001B380F /* Spear_graphic.png */,
-				E70D69EA1A279F35001B380F /* Spear.png */,
-				E70D69EB1A279F35001B380F /* Sword_graphic.png */,
-				E70D69EC1A279F35001B380F /* Sword.png */,
-			);
-			name = Images;
 			sourceTree = "<group>";
 		};
 		E70D69F91A279F96001B380F /* Menu */ = {
@@ -225,8 +160,9 @@
 		E70D699A1A279CC8001B380F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0630;
+				LastUpgradeCheck = 0700;
 				TargetAttributes = {
 					E70D69A51A279D87001B380F = {
 						CreatedOnToolsVersion = 6.2;
@@ -257,28 +193,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E70D69F41A279F35001B380F /* Sword_graphic.png in Resources */,
-				E70D69F11A279F35001B380F /* shield.png in Resources */,
-				E70D69E01A279F0E001B380F /* RedCavalry.png in Resources */,
-				E70D69E31A279F0E001B380F /* RedLegion.png in Resources */,
-				E70D69F31A279F35001B380F /* Spear.png in Resources */,
 				E70D69B11A279D87001B380F /* Main.storyboard in Resources */,
-				E70D69EF1A279F35001B380F /* Pilum.png in Resources */,
-				E70D69EE1A279F35001B380F /* GladiusDis.png in Resources */,
 				E70D69B31A279D87001B380F /* Images.xcassets in Resources */,
-				E70D69E21A279F0E001B380F /* RedHelmetHighlight.png in Resources */,
-				E70D69E11A279F0E001B380F /* RedHelmet.png in Resources */,
-				E70D69F21A279F35001B380F /* Spear_graphic.png in Resources */,
-				E70D69DA1A279F0E001B380F /* BlueArcher.png in Resources */,
-				E70D69F51A279F35001B380F /* Sword.png in Resources */,
 				E70D69CC1A279E43001B380F /* Launch Screen.xib in Resources */,
-				E70D69DF1A279F0E001B380F /* RedArcher.png in Resources */,
-				E70D69F01A279F35001B380F /* PilumDis.png in Resources */,
-				E70D69DC1A279F0E001B380F /* BlueHelmet.png in Resources */,
-				E70D69DB1A279F0E001B380F /* BlueCavalry.png in Resources */,
-				E70D69ED1A279F35001B380F /* Gladius.png in Resources */,
-				E70D69DD1A279F0E001B380F /* BlueHelmetHighlight.png in Resources */,
-				E70D69DE1A279F0E001B380F /* BlueLegion.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +238,7 @@
 		E70D699E1A279CC8001B380F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_TESTABILITY = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
 			};
@@ -375,6 +293,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.markwick.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
@@ -419,6 +338,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.markwick.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;

@@ -35,7 +35,6 @@ class BattleField: UIView, UIScrollViewDelegate {
 		(superview as? UIScrollView)?.contentSize = frame.size
 		//Create Cells
 		let cellSpacing:CGFloat = 1
-		let boardSize = frame.size.width
 		let cellSize = (frame.size.width - 10 * cellSpacing)/11
 		for x in 0 ..< 11 {
 			var row:[BattleCell]=[]

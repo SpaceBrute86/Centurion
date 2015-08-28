@@ -25,8 +25,8 @@ struct AIPlayer {
 			center.x /= enemies.count
 			center.y /= enemies.count
 			
-			var oldDist = abs(move.soldierAttacker!.location.x - center.x) + abs(move.soldierAttacker!.location.y - center.y)
-			var newDist = abs(move.destination!.x - center.x) + abs(move.destination!.y - center.y)
+			let oldDist = abs(move.soldierAttacker!.location.x - center.x) + abs(move.soldierAttacker!.location.y - center.y)
+			let newDist = abs(move.destination!.x - center.x) + abs(move.destination!.y - center.y)
 			return oldDist > newDist ? oldDist-newDist/2 : 0
 		case .Attack(.Gladius):
 			let hits = min(move.soldierAttacker!.gladius, 10) * 5/8
@@ -79,7 +79,7 @@ struct AIPlayer {
 	func chooseMove(completion:(GameMove)->()){
 		AIQueue.addOperationWithBlock{
 			var possibleMoves:[GameMove] = self.calculatePossibleMoves()
-			possibleMoves.sort { self.rankMove($0) > self.rankMove($1) }
+			possibleMoves.sortInPlace { self.rankMove($0) > self.rankMove($1) }
 			let move = self.pickMove(possibleMoves)
 			NSOperationQueue.mainQueue().addOperationWithBlock{
 				completion(move)

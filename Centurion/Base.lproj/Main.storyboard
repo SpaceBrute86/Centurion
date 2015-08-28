@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8173.3" systemVersion="15A263e" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8142"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -25,6 +26,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COF-Tb-l9P">
                                         <rect key="frame" x="61" y="81" width="201" height="45.5"/>
+                                        <animations/>
                                         <color key="backgroundColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="1 Player">
@@ -35,11 +37,12 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ZpP-Cn-8Wc" kind="presentation" identifier="1P" modalTransitionStyle="crossDissolve" animates="NO" id="0wA-z4-z2w"/>
+                                            <segue destination="ZpP-Cn-8Wc" kind="presentation" identifier="1P" animates="NO" modalTransitionStyle="crossDissolve" id="0wA-z4-z2w"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHD-fU-euD">
-                                        <rect key="frame" x="61" y="161.5" width="201" height="45.5"/>
+                                        <rect key="frame" x="61" y="161" width="201" height="45.5"/>
+                                        <animations/>
                                         <color key="backgroundColor" white="0.5" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="2 Player">
@@ -50,11 +53,12 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ZpP-Cn-8Wc" kind="presentation" identifier="2P" modalTransitionStyle="crossDissolve" animates="NO" id="Wv3-dp-FGA"/>
+                                            <segue destination="ZpP-Cn-8Wc" kind="presentation" identifier="2P" animates="NO" modalTransitionStyle="crossDissolve" id="Wv3-dp-FGA"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c6M-JE-Hi3">
-                                        <rect key="frame" x="61" y="242.5" width="201" height="45.5"/>
+                                        <rect key="frame" x="61" y="242" width="201" height="45.5"/>
+                                        <animations/>
                                         <color key="backgroundColor" white="0.75" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="201" id="T9P-ij-kSA"/>
@@ -73,30 +77,35 @@
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fZp-vu-2vn">
-                                        <rect key="frame" x="61" y="207.5" width="201" height="35"/>
+                                        <rect key="frame" x="61" y="207" width="201" height="35"/>
+                                        <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="250" constant="40" id="2N9-bP-zyV"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lMf-ZJ-8Ie">
-                                        <rect key="frame" x="61" y="126.5" width="201" height="35"/>
+                                        <rect key="frame" x="61" y="126" width="201" height="35"/>
+                                        <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cBs-RQ-14n">
                                         <rect key="frame" x="61" y="288" width="201" height="35"/>
+                                        <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" priority="750" constant="40" id="usw-4J-6Dr"/>
                                         </constraints>
                                     </view>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalCompressionResistancePriority="650" text="Centurion" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IR1-nb-rQr">
-                                        <rect key="frame" x="62" y="0.0" width="198" height="81"/>
+                                        <rect key="frame" x="58" y="0.0" width="206.5" height="81"/>
+                                        <animations/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="44"/>
                                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" white="0.35147696169999998" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="AHD-fU-euD" firstAttribute="top" secondItem="COF-Tb-l9P" secondAttribute="bottom" constant="30" id="03H-nV-bg3"/>
@@ -138,6 +147,7 @@
                                 </variation>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Nbh-l1-ltB" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="9gf-0E-kx9"/>
@@ -165,6 +175,7 @@
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Centurion - How to Play" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="d5V-B6-Szj">
                                 <rect key="frame" x="0.0" y="20" width="375" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Ezw-Kc-bCp"/>
                                 </constraints>
@@ -178,43 +189,50 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NEF-JT-s83">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="508"/>
                                         <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" misplaced="YES" text="Red moves first. After red's first move, each player makes two moves per turn." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLC-fw-7hA">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="Red moves first. After red's first move, each player makes two moves per turn." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BLC-fw-7hA">
                                                 <rect key="frame" x="40" y="212" width="315" height="111"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="To win the game, you must get your opponent's health below twenty percent and possess at least twice as much." lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="UfE-Ug-E0A">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="To win the game, you must get your opponent's health below twenty percent and possess at least twice as much." lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="UfE-Ug-E0A">
                                                 <rect key="frame" x="40" y="377" width="315" height="111"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Turn cycle:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKf-PB-wB9">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Turn cycle:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HKf-PB-wB9">
                                                 <rect key="frame" x="20" y="165" width="150.5" height="38.5"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Destroy your opponents military by moving your armies around the battlefield and attacking your opponent's armies." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="bci-pS-A7M">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Destroy your opponents military by moving your armies around the battlefield and attacking your opponent's armies." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="bci-pS-A7M">
                                                 <rect key="frame" x="40" y="46" width="315" height="111"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Winning the Game:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="4l2-2V-uTX">
                                                 <rect key="frame" x="20" y="331" width="267" height="38"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Objective:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAN-OU-GwM">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Objective:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAN-OU-GwM">
                                                 <rect key="frame" x="20" y="0.0" width="140.5" height="38.5"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="HKf-PB-wB9" firstAttribute="leading" secondItem="NEF-JT-s83" secondAttribute="leading" constant="20" symbolic="YES" id="2gP-UJ-Zq6"/>
@@ -242,8 +260,9 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dRM-0B-mt5">
                                         <rect key="frame" x="375" y="0.0" width="375" height="508"/>
                                         <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Weapons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YT-RS-7bM">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Weapons" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7YT-RS-7bM">
                                                 <rect key="frame" x="122" y="0.0" width="131" height="38.5"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="38.5" id="QJ6-bL-Shu"/>
                                                 </constraints>
@@ -253,65 +272,76 @@
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="These protect soldiers when attacked. When shields run out soldiers become more vulnerable to attacks." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OYm-BB-yhE">
                                                 <rect key="frame" x="82" y="83" width="272.5" height="97.5"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="HDp-fk-3HI">
                                                 <rect key="frame" x="20" y="83" width="54.5" height="54"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="HDp-fk-3HI" secondAttribute="height" multiplier="1:1" id="sXX-F7-lsH"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Pilum (spear)" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pLS-BO-ss7">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" misplaced="YES" text="Pilum (spear)" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pLS-BO-ss7">
                                                 <rect key="frame" x="80" y="188" width="135.5" height="29"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="These can be thrown to attack soldiers anywhere on the board, but do less damge with increased distance." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TnL-Dh-7e2">
                                                 <rect key="frame" x="80" y="225" width="274.5" height="98"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Spear_graphic.png" translatesAutoresizingMaskIntoConstraints="NO" id="DMb-yO-oth">
                                                 <rect key="frame" x="20" y="225" width="54.5" height="54"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="DMb-yO-oth" secondAttribute="height" multiplier="1:1" id="FRQ-ov-Wws"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Gladius (sword)" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qqX-Vn-UTo">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Gladius (sword)" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qqX-Vn-UTo">
                                                 <rect key="frame" x="82" y="331" width="162" height="29"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="These can be used to attack nearby enemies. They also tend to do more damage than spears." lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.40000000000000002" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8vb-eJ-D4n">
                                                 <rect key="frame" x="82" y="368" width="272.5" height="97.5"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Tap a unit (friendly or enemy) at any time to view weapon levels" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sV3-Lt-ved">
                                                 <rect key="frame" x="20" y="474" width="335" height="33.5"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Sword_graphic.png" translatesAutoresizingMaskIntoConstraints="NO" id="MLj-hl-MjH">
                                                 <rect key="frame" x="20" y="368" width="54.5" height="54"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="MLj-hl-MjH" secondAttribute="height" multiplier="1:1" id="42F-wg-CAg"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Scutum (shield)" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="i7W-ai-QbO">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Scutum (shield)" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="i7W-ai-QbO">
                                                 <rect key="frame" x="82" y="46" width="161.5" height="29"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="pLS-BO-ss7" firstAttribute="height" secondItem="qqX-Vn-UTo" secondAttribute="height" id="1Fh-7d-mms"/>
@@ -361,18 +391,21 @@
                                         <subviews>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" ambiguous="YES" text="tap the soldier you want to move. then tap the spot you would like to move to." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BNG-DL-wz1">
                                                 <rect key="frame" x="20" y="143" width="335" height="47"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="16"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" ambiguous="YES" text="Move a soldier into a nearby space" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1Br-DK-6Ve">
                                                 <rect key="frame" x="20" y="109" width="335" height="24"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="On your turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cAP-eV-H97">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="On your turn" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cAP-eV-H97">
                                                 <rect key="frame" x="127" y="0.0" width="121" height="33"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="33" id="Qgy-xA-9jL"/>
                                                 </constraints>
@@ -382,12 +415,14 @@
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Attack another soldier. This can be done with a pilum (spear) or a gladius (sword)" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="R7V-CI-oS3">
                                                 <rect key="frame" x="20" y="207" width="335" height="72"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="K8T-5S-IN1">
                                                 <rect key="frame" x="20" y="279" width="335" height="72"/>
+                                                <animations/>
                                                 <string key="text">Press the button for your chosen weapon (press again to deactivate). Tap the soldier you wish to attack with, then tap the enemy you wish to attack</string>
                                                 <fontDescription key="fontDescription" type="italicSystem" pointSize="14"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -395,12 +430,15 @@
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="PilumDis.png" translatesAutoresizingMaskIntoConstraints="NO" id="7kZ-XD-3q6">
                                                 <rect key="frame" x="128" y="460" width="39.5" height="39.5"/>
+                                                <animations/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Pilum.png" translatesAutoresizingMaskIntoConstraints="NO" id="0vM-p1-bIn">
                                                 <rect key="frame" x="315" y="460" width="39.5" height="39.5"/>
+                                                <animations/>
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="253" text="Activated:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="0s3-hH-ajB">
                                                 <rect key="frame" x="207" y="391" width="69" height="109"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="69" id="0dn-8Z-t4f"/>
                                                 </constraints>
@@ -410,9 +448,11 @@
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="GladiusDis.png" translatesAutoresizingMaskIntoConstraints="NO" id="A9J-IF-e5B">
                                                 <rect key="frame" x="128" y="391" width="39.5" height="39.5"/>
+                                                <animations/>
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Gladius.png" translatesAutoresizingMaskIntoConstraints="NO" id="fTI-rK-4hc">
                                                 <rect key="frame" x="315" y="391" width="39.5" height="39.5"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="cXB-cV-Ds1"/>
                                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="100" id="xKL-pd-l8K"/>
@@ -420,17 +460,20 @@
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Disactivated:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NZx-mY-4fB">
                                                 <rect key="frame" x="20" y="436" width="89" height="18"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="252" text="On your turn you may do one of two things:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="HSN-Wf-nSI">
                                                 <rect key="frame" x="20" y="41" width="335" height="48"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="R7V-CI-oS3" firstAttribute="top" secondItem="BNG-DL-wz1" secondAttribute="bottom" priority="500" constant="30" id="14b-FF-QjO"/>
@@ -492,14 +535,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hgA-P7-JiO">
                                         <rect key="frame" x="1125" y="0.0" width="375" height="508"/>
                                         <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Legionary" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c91-M7-Txf">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Legionary" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="c91-M7-Txf">
                                                 <rect key="frame" x="20" y="11" width="86.5" height="24"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="RedLegion.png" translatesAutoresizingMaskIntoConstraints="NO" id="1AR-Uc-QMf">
                                                 <rect key="frame" x="311" y="1" width="44" height="44"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="44" id="N35-tQ-VeX"/>
                                                     <constraint firstAttribute="height" constant="44" id="vRl-vk-S8v"/>
@@ -507,6 +552,7 @@
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Legionaries are footsoldiers that can move around the board and attack other units. You recieve five of them." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="bbN-6F-2u0">
                                                 <rect key="frame" x="20" y="53" width="335" height="107.5"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -516,78 +562,97 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pm8-Lo-uAL">
                                                         <rect key="frame" x="115" y="0.0" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rv5-hN-MRZ">
                                                         <rect key="frame" x="0.0" y="38" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="s7c-g7-v27">
                                                         <rect key="frame" x="115" y="76" width="37" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Vh-Jt-th2">
                                                         <rect key="frame" x="154" y="114" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hac-0x-W1v">
                                                         <rect key="frame" x="38" y="76" width="37" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dza-rf-qOi">
                                                         <rect key="frame" x="0.0" y="114" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ALn-ld-VwQ">
                                                         <rect key="frame" x="0.0" y="152" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J8V-kk-E5c">
                                                         <rect key="frame" x="38" y="38" width="37" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aRv-l8-AZ7">
                                                         <rect key="frame" x="115" y="152" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OHc-oK-vWn">
                                                         <rect key="frame" x="154" y="76" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ISz-nk-gCw">
                                                         <rect key="frame" x="38" y="152" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fg0-b2-pKg">
                                                         <rect key="frame" x="77" y="38" width="36" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xj8-Mj-hVZ">
                                                         <rect key="frame" x="154" y="0.0" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GLq-rz-Jmv">
                                                         <rect key="frame" x="38" y="114" width="37" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lIG-rP-RRj">
                                                         <rect key="frame" x="38" y="0.0" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kfp-9X-Oci">
                                                         <rect key="frame" x="115" y="38" width="37" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rkz-YT-0aQ">
                                                         <rect key="frame" x="0.0" y="76" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OMr-S3-8rK">
                                                         <rect key="frame" x="77" y="114" width="36" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O7b-gU-D16">
                                                         <rect key="frame" x="77" y="152" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dDY-xA-bba">
@@ -598,8 +663,10 @@
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="RedLegion.png" translatesAutoresizingMaskIntoConstraints="NO" id="stD-50-QKy">
                                                                         <rect key="frame" x="0.0" y="0.0" width="36" height="36"/>
+                                                                        <animations/>
                                                                     </imageView>
                                                                 </subviews>
+                                                                <animations/>
                                                                 <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="stD-50-QKy" firstAttribute="leading" secondItem="jGj-ai-2sB" secondAttribute="leading" id="QnM-Nj-Ofw"/>
@@ -609,6 +676,7 @@
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="bottom" secondItem="jGj-ai-2sB" secondAttribute="bottom" id="7Jc-rR-O0G"/>
@@ -620,25 +688,31 @@
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ct-s2-HEd">
                                                         <rect key="frame" x="77" y="0.0" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Jh-GJ-dnr">
                                                         <rect key="frame" x="154" y="38" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sfb-Ob-hX6">
                                                         <rect key="frame" x="115" y="114" width="37" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dUI-sJ-eTV">
                                                         <rect key="frame" x="0.0" y="0.0" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rf8-p6-r7g">
                                                         <rect key="frame" x="154" y="152" width="36.5" height="36"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                 </subviews>
+                                                <animations/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="2Vh-Jt-th2" firstAttribute="height" secondItem="OMr-S3-8rK" secondAttribute="height" id="09o-YT-jyi"/>
@@ -755,18 +829,23 @@
                                             </view>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="uN4-wv-eqU">
                                                 <rect key="frame" x="70" y="422" width="285" height="2"/>
+                                                <animations/>
                                             </progressView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Fze-HJ-XOG">
                                                 <rect key="frame" x="70" y="454" width="285" height="2"/>
+                                                <animations/>
                                             </progressView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="9tX-eX-t1E">
                                                 <rect key="frame" x="70" y="486" width="285" height="2"/>
+                                                <animations/>
                                             </progressView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="ygb-xQ-7n7">
                                                 <rect key="frame" x="70" y="390" width="285" height="2"/>
+                                                <animations/>
                                             </progressView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Sword_graphic.png" translatesAutoresizingMaskIntoConstraints="NO" id="Lq3-MT-4mP">
                                                 <rect key="frame" x="20" y="472" width="30" height="30"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="Fip-ip-tvQ"/>
                                                     <constraint firstAttribute="width" constant="20" id="JXP-ER-afw"/>
@@ -780,6 +859,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Spear_graphic.png" translatesAutoresizingMaskIntoConstraints="NO" id="rWJ-Xo-ckC">
                                                 <rect key="frame" x="20" y="440" width="30" height="30"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="Lg9-wa-vL5"/>
                                                     <constraint firstAttribute="width" constant="20" id="pE8-wb-IpQ"/>
@@ -793,6 +873,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="VdW-Gc-zWp">
                                                 <rect key="frame" x="20" y="408" width="30" height="30"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="VdW-Gc-zWp" secondAttribute="height" multiplier="1:1" id="47W-e2-kwm"/>
                                                     <constraint firstAttribute="width" constant="20" id="Fwz-xM-e9r"/>
@@ -806,6 +887,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Sword_graphic.png" translatesAutoresizingMaskIntoConstraints="NO" id="0ke-AA-Vye">
                                                 <rect key="frame" x="20" y="376" width="30" height="30"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="CCc-ck-yXk"/>
                                                     <constraint firstAttribute="width" constant="20" id="Egw-71-xbD"/>
@@ -818,6 +900,7 @@
                                                 </variation>
                                             </imageView>
                                         </subviews>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="trailing" secondItem="uN4-wv-eqU" secondAttribute="trailing" constant="20" id="0KJ-cd-Si3"/>
@@ -859,14 +942,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZYj-0Q-meY">
                                         <rect key="frame" x="1500" y="0.0" width="375" height="508"/>
                                         <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Cavalry" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="h0W-xR-KWN">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Cavalry" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="h0W-xR-KWN">
                                                 <rect key="frame" x="20" y="11" width="66" height="24"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="RedCavalry.png" translatesAutoresizingMaskIntoConstraints="NO" id="Aka-FT-3hs">
                                                 <rect key="frame" x="311" y="1" width="44" height="44"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="44" id="7CA-HF-bG3"/>
                                                     <constraint firstAttribute="width" constant="44" id="heC-fa-jeg"/>
@@ -874,6 +959,7 @@
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="IiQ-Ba-6UU">
                                                 <rect key="frame" x="20" y="53" width="335" height="86"/>
+                                                <animations/>
                                                 <string key="text">Cavalry are horsemen that can move faster than legionaries. They also have more health and attack power. You recieve four of them.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -884,78 +970,97 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jGP-in-vrO">
                                                         <rect key="frame" x="128" y="-2" width="40.5" height="41.5"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dAU-o8-uRF">
                                                         <rect key="frame" x="0.0" y="41" width="40.5" height="41"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITJ-8G-LbB">
                                                         <rect key="frame" x="128" y="84" width="40.5" height="41.5"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Omw-tQ-qXB">
                                                         <rect key="frame" x="170" y="127" width="40.5" height="41"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="acy-lK-Ykq">
                                                         <rect key="frame" x="42" y="84" width="40.5" height="41.5"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a8t-qg-BgZ">
                                                         <rect key="frame" x="0.0" y="127" width="40.5" height="41"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v4Y-Ot-58J">
                                                         <rect key="frame" x="0.0" y="170" width="40.5" height="41"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SX4-XS-ETt">
                                                         <rect key="frame" x="42" y="41" width="40.5" height="41"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C9k-Cs-9jj">
                                                         <rect key="frame" x="128" y="170" width="40" height="41"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9TT-uX-ezv">
                                                         <rect key="frame" x="170" y="84" width="40.5" height="41.5"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QSe-vB-jHC">
                                                         <rect key="frame" x="43" y="170" width="40" height="41"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvX-6d-gAm">
                                                         <rect key="frame" x="85" y="41" width="41" height="41"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z56-9E-H3q">
                                                         <rect key="frame" x="169" y="-2" width="41" height="41.5"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LaC-E9-tdq">
                                                         <rect key="frame" x="42" y="127" width="40.5" height="41"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RIV-Nz-LF1">
                                                         <rect key="frame" x="43" y="-2" width="40.5" height="41.5"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pA-jD-EGh">
                                                         <rect key="frame" x="128" y="41" width="40.5" height="41"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x99-5t-mL3">
                                                         <rect key="frame" x="0.0" y="84" width="40.5" height="41.5"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qR-Cy-nHc">
                                                         <rect key="frame" x="85" y="127" width="41" height="41"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Ue-Oi-91J">
                                                         <rect key="frame" x="86" y="170" width="40.5" height="41"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XYq-JD-dGn">
@@ -966,8 +1071,10 @@
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="RedCavalry.png" translatesAutoresizingMaskIntoConstraints="NO" id="juc-2r-mK1">
                                                                         <rect key="frame" x="0.0" y="0.0" width="41" height="41.5"/>
+                                                                        <animations/>
                                                                     </imageView>
                                                                 </subviews>
+                                                                <animations/>
                                                                 <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="juc-2r-mK1" firstAttribute="leading" secondItem="S2N-t6-d1U" secondAttribute="leading" id="2yV-vX-GGH"/>
@@ -977,6 +1084,7 @@
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstItem="S2N-t6-d1U" firstAttribute="leading" secondItem="XYq-JD-dGn" secondAttribute="leading" id="5oe-KL-S83"/>
@@ -988,25 +1096,31 @@
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zr0-Yp-nZM">
                                                         <rect key="frame" x="86" y="-2" width="40.5" height="41.5"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tWq-TW-17N">
                                                         <rect key="frame" x="170" y="41" width="40.5" height="41"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y0a-oo-17v">
                                                         <rect key="frame" x="128" y="127" width="40.5" height="41"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hum-9I-Yoj">
                                                         <rect key="frame" x="0.0" y="-2" width="41" height="41.5"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GOB-XR-TAa">
                                                         <rect key="frame" x="170" y="170" width="40.5" height="41"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                 </subviews>
+                                                <animations/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="XYq-JD-dGn" firstAttribute="centerX" secondItem="fvX-6d-gAm" secondAttribute="centerX" id="01b-Az-zSz"/>
@@ -1123,18 +1237,23 @@
                                             </view>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="vJw-HB-LLl">
                                                 <rect key="frame" x="70" y="422" width="285" height="2"/>
+                                                <animations/>
                                             </progressView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="Aoo-gS-Psb">
                                                 <rect key="frame" x="70" y="454" width="285" height="2"/>
+                                                <animations/>
                                             </progressView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="0vq-lO-fFh">
                                                 <rect key="frame" x="70" y="486" width="285" height="2"/>
+                                                <animations/>
                                             </progressView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="TSP-bK-NwO">
                                                 <rect key="frame" x="70" y="390" width="285" height="2"/>
+                                                <animations/>
                                             </progressView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Sword_graphic.png" translatesAutoresizingMaskIntoConstraints="NO" id="mIu-rC-jIG">
                                                 <rect key="frame" x="20" y="472" width="30" height="30"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="FuM-UA-2HJ"/>
                                                     <constraint firstAttribute="width" constant="20" id="ay9-Nj-8Wf"/>
@@ -1148,6 +1267,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Spear_graphic.png" translatesAutoresizingMaskIntoConstraints="NO" id="MlD-49-upL">
                                                 <rect key="frame" x="20" y="440" width="30" height="30"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="YnE-vE-rkE"/>
                                                     <constraint firstAttribute="width" secondItem="MlD-49-upL" secondAttribute="height" multiplier="1:1" id="iOY-sc-z9Z"/>
@@ -1161,6 +1281,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="SUK-79-sfc">
                                                 <rect key="frame" x="20" y="408" width="30" height="30"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="20" id="lqd-DD-xcV"/>
                                                     <constraint firstAttribute="width" constant="30" id="t1C-r0-mhe"/>
@@ -1174,6 +1295,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Sword_graphic.png" translatesAutoresizingMaskIntoConstraints="NO" id="ArN-oC-2GV">
                                                 <rect key="frame" x="20" y="376" width="30" height="30"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="ArN-oC-2GV" secondAttribute="height" multiplier="1:1" id="9Zp-ov-CTt"/>
                                                     <constraint firstAttribute="width" constant="30" id="9tt-5f-CtQ"/>
@@ -1186,6 +1308,7 @@
                                                 </variation>
                                             </imageView>
                                         </subviews>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="ArN-oC-2GV" firstAttribute="width" secondItem="ArN-oC-2GV" secondAttribute="height" multiplier="1:1" id="0RH-U4-JP7"/>
@@ -1227,14 +1350,16 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aQb-c6-rpH">
                                         <rect key="frame" x="1875" y="0.0" width="375" height="508"/>
                                         <subviews>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Archer" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QeI-48-nTQ">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Archer" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="QeI-48-nTQ">
                                                 <rect key="frame" x="20" y="11" width="58" height="24"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="RedArcher.png" translatesAutoresizingMaskIntoConstraints="NO" id="R4d-u7-olN">
                                                 <rect key="frame" x="311" y="1" width="44" height="44"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="44" id="9VJ-ze-L0a"/>
                                                     <constraint firstAttribute="height" constant="44" id="RKC-dM-IWH"/>
@@ -1242,6 +1367,7 @@
                                             </imageView>
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" misplaced="YES" text="Archers have strong pilum attacks but weak gladius attacks. If you recieve two." lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="TBF-Rm-4Gf">
                                                 <rect key="frame" x="20" y="53" width="335" height="64.5"/>
+                                                <animations/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -1251,78 +1377,97 @@
                                                 <subviews>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Ra-Dr-D9E">
                                                         <rect key="frame" x="141" y="-2" width="45" height="46"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="78S-Fa-Nov">
                                                         <rect key="frame" x="0.0" y="45.5" width="45" height="45"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uwu-mD-vPw">
                                                         <rect key="frame" x="141" y="92.5" width="45" height="46"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QH0-en-0vF">
                                                         <rect key="frame" x="187.5" y="140" width="45" height="45"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VQU-q9-bdI">
                                                         <rect key="frame" x="46.5" y="92.5" width="45" height="46"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Qq-GK-gIq">
                                                         <rect key="frame" x="0.0" y="140" width="45" height="45"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qnX-Ia-mtT">
                                                         <rect key="frame" x="0.0" y="187" width="45" height="45.5"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J1P-Az-bAO">
                                                         <rect key="frame" x="46.5" y="45.5" width="45" height="45"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6tU-95-RFm">
                                                         <rect key="frame" x="141" y="187" width="44.5" height="45.5"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8e0-fn-rTx">
                                                         <rect key="frame" x="187.5" y="92.5" width="45" height="46"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nA5-gi-XOc">
                                                         <rect key="frame" x="47.5" y="187" width="44.5" height="45.5"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uI8-5h-xDC">
                                                         <rect key="frame" x="94" y="45.5" width="45" height="45"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="83E-hh-0do">
                                                         <rect key="frame" x="187.5" y="-2" width="45" height="46"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lXR-HC-2u4">
                                                         <rect key="frame" x="46.5" y="140" width="45" height="45"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Ye-Bp-Ag1">
                                                         <rect key="frame" x="47.5" y="-2" width="45" height="46"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="arn-DA-EPs">
                                                         <rect key="frame" x="141" y="45.5" width="45" height="45"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u60-ez-aBK">
                                                         <rect key="frame" x="0.0" y="92.5" width="45" height="46"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mea-gR-3Kt">
                                                         <rect key="frame" x="94" y="140" width="45" height="45"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.1022282913" green="0.77806884050000003" blue="0.01504664868" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Gg-4A-7yu">
                                                         <rect key="frame" x="95" y="187" width="44.5" height="45.5"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ztg-51-Jlb">
@@ -1333,8 +1478,10 @@
                                                                 <subviews>
                                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" misplaced="YES" image="RedArcher.png" translatesAutoresizingMaskIntoConstraints="NO" id="nYu-IK-Obt">
                                                                         <rect key="frame" x="0.0" y="0.0" width="45" height="46"/>
+                                                                        <animations/>
                                                                     </imageView>
                                                                 </subviews>
+                                                                <animations/>
                                                                 <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <constraints>
                                                                     <constraint firstItem="nYu-IK-Obt" firstAttribute="top" secondItem="nYB-Ws-dZn" secondAttribute="top" id="65N-W1-yU4"/>
@@ -1344,6 +1491,7 @@
                                                                 </constraints>
                                                             </view>
                                                         </subviews>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="trailing" secondItem="nYB-Ws-dZn" secondAttribute="trailing" id="4xB-NH-rOR"/>
@@ -1355,25 +1503,31 @@
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EGt-by-XVP">
                                                         <rect key="frame" x="95" y="-2" width="44.5" height="46"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6Nk-BR-s8a">
                                                         <rect key="frame" x="187.5" y="45.5" width="45" height="45"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AIj-zo-vLN">
                                                         <rect key="frame" x="141" y="140" width="45" height="45"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l5E-gO-r1P">
                                                         <rect key="frame" x="0.0" y="-2" width="45.5" height="46"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wsf-e9-27U">
                                                         <rect key="frame" x="187.5" y="187" width="45" height="45.5"/>
+                                                        <animations/>
                                                         <color key="backgroundColor" red="0.0" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     </view>
                                                 </subviews>
+                                                <animations/>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                                 <constraints>
                                                     <constraint firstItem="QH0-en-0vF" firstAttribute="width" secondItem="AIj-zo-vLN" secondAttribute="width" id="0UW-Ia-zyq"/>
@@ -1490,18 +1644,23 @@
                                             </view>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="riQ-Wz-myw">
                                                 <rect key="frame" x="70" y="422" width="285" height="2"/>
+                                                <animations/>
                                             </progressView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.69999999999999996" translatesAutoresizingMaskIntoConstraints="NO" id="Pi5-vy-dZA">
                                                 <rect key="frame" x="70" y="454" width="285" height="2"/>
+                                                <animations/>
                                             </progressView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="eq5-FV-3ts">
                                                 <rect key="frame" x="70" y="486" width="285" height="2"/>
+                                                <animations/>
                                             </progressView>
                                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="GMn-Tm-gr9">
                                                 <rect key="frame" x="70" y="390" width="285" height="2"/>
+                                                <animations/>
                                             </progressView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Sword_graphic.png" translatesAutoresizingMaskIntoConstraints="NO" id="6kn-LM-wgs">
                                                 <rect key="frame" x="20" y="472" width="30" height="30"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="6kn-LM-wgs" secondAttribute="height" multiplier="1:1" id="Fi0-LR-rTB"/>
                                                     <constraint firstAttribute="width" constant="30" id="Mna-iC-OsA"/>
@@ -1515,6 +1674,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Spear_graphic.png" translatesAutoresizingMaskIntoConstraints="NO" id="8Eh-bI-bQt">
                                                 <rect key="frame" x="20" y="440" width="30" height="30"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="35j-LP-v3s"/>
                                                     <constraint firstAttribute="width" constant="20" id="jjy-hI-N8p"/>
@@ -1528,6 +1688,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="shield.png" translatesAutoresizingMaskIntoConstraints="NO" id="HKi-NS-JRQ">
                                                 <rect key="frame" x="20" y="408" width="30" height="30"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="HKi-NS-JRQ" secondAttribute="height" multiplier="1:1" id="1yL-qB-dR4"/>
                                                     <constraint firstAttribute="width" constant="30" id="3xr-K8-3D3"/>
@@ -1541,6 +1702,7 @@
                                             </imageView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Sword_graphic.png" translatesAutoresizingMaskIntoConstraints="NO" id="Hjg-Pq-rF9">
                                                 <rect key="frame" x="20" y="376" width="30" height="30"/>
+                                                <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="30" id="HHu-M8-9EE"/>
                                                     <constraint firstAttribute="width" secondItem="Hjg-Pq-rF9" secondAttribute="height" multiplier="1:1" id="UUV-tE-v0H"/>
@@ -1553,6 +1715,7 @@
                                                 </variation>
                                             </imageView>
                                         </subviews>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="22I-4D-r7U" firstAttribute="top" secondItem="TBF-Rm-4Gf" secondAttribute="bottom" constant="20" id="21q-dO-pdi"/>
@@ -1592,6 +1755,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstItem="ZYj-0Q-meY" firstAttribute="height" secondItem="hgA-P7-JiO" secondAttribute="height" id="0wr-hm-aG1"/>
                                     <constraint firstItem="dRM-0B-mt5" firstAttribute="width" secondItem="CuZ-au-bxd" secondAttribute="width" id="2k1-bp-bQ5"/>
@@ -1640,18 +1804,21 @@
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="6" translatesAutoresizingMaskIntoConstraints="NO" id="AJm-dm-rTk">
                                 <rect key="frame" x="144" y="579" width="87" height="37"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="qKQ-92-HhV"/>
                                 </constraints>
                             </pageControl>
-                            <adBannerView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="cei-HF-UbV">
+                            <adBannerView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cei-HF-UbV">
                                 <rect key="frame" x="27" y="617" width="320" height="50"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="5XR-Kp-tKU"/>
                                 </constraints>
                             </adBannerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WKu-2Y-et2">
                                 <rect key="frame" x="330" y="39" width="38" height="30"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="tintColor" white="0.74509580289999999" alpha="1" colorSpace="calibratedWhite"/>
                                 <state key="normal" title="Done">
@@ -1666,6 +1833,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="cei-HF-UbV" secondAttribute="centerX" id="1ug-wP-BpS"/>
@@ -1719,20 +1887,24 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6c-S7-aZf">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="161"/>
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jLe-Wf-YgJ" customClass="LevelMeter" customModule="Centurion" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="7" width="226" height="42"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLe-Wf-YgJ" customClass="LevelMeter" customModule="Centurion" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="12" width="226" height="42"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.81520515680000005" green="0.67464822530000002" blue="0.15889613329999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GVg-S2-sNc" customClass="LevelMeter" customModule="Centurion" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="54" width="226" height="43"/>
+                                        <rect key="frame" x="20" y="54.5" width="226" height="42"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.81520515680000005" green="0.67464822530000002" blue="0.15889613329999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HfH-8a-upC" customClass="LevelMeter" customModule="Centurion" customModuleProvider="target">
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HfH-8a-upC" customClass="LevelMeter" customModule="Centurion" customModuleProvider="target">
                                         <rect key="frame" x="20" y="102" width="226" height="42"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.81520515680000005" green="0.67464822530000002" blue="0.15889613329999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <progressView opaque="NO" contentMode="scaleToFill" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="i1C-df-OTX">
                                         <rect key="frame" x="20" y="149" width="374" height="2"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="dHO-Dd-Nap"/>
                                         </constraints>
@@ -1741,6 +1913,7 @@
                                     </progressView>
                                     <progressView opaque="NO" contentMode="scaleToFill" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="SXQ-sl-2Kk">
                                         <rect key="frame" x="20" y="155" width="374" height="2"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="S0g-m3-Xtx"/>
                                         </constraints>
@@ -1749,6 +1922,7 @@
                                     </progressView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCW-HG-Ubc">
                                         <rect key="frame" x="364" y="58" width="44" height="44"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="QQH-Pk-b2O"/>
                                             <constraint firstAttribute="height" constant="44" id="pfq-bw-LWV"/>
@@ -1767,12 +1941,14 @@
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO UNIT SELECTED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="sGF-ny-IJm">
                                         <rect key="frame" x="12" y="12" width="234" height="127"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.81520515680000005" green="0.67464822530000002" blue="0.15889613329999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="BlueHelmet.png" highlightedImage="BlueHelmetHighlight.png" translatesAutoresizingMaskIntoConstraints="NO" id="UuK-LX-Hbj">
                                         <rect key="frame" x="265" y="22" width="103" height="117"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="UuK-LX-Hbj" secondAttribute="height" multiplier="52:59" id="8V9-tb-zcP"/>
                                             <constraint firstAttribute="width" constant="104" id="uos-Bf-pf3"/>
@@ -1784,6 +1960,7 @@
                                         </variation>
                                     </imageView>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.81520515680000005" green="0.67464822530000002" blue="0.15889613329999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="SXQ-sl-2Kk" firstAttribute="top" secondItem="HfH-8a-upC" secondAttribute="bottom" constant="7.5" id="0MB-yS-tmf"/>
@@ -1848,9 +2025,11 @@
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hSK-mQ-MMv" customClass="BattleField" customModule="Centurion" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="414"/>
+                                        <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="hSK-mQ-MMv" secondAttribute="width" id="4co-mw-VsS"/>
                                     <constraint firstAttribute="height" secondItem="hSK-mQ-MMv" secondAttribute="height" id="Chi-fu-o5H"/>
@@ -1864,6 +2043,7 @@
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2bh-kS-6kx">
                                 <rect key="frame" x="374" y="161" width="40" height="40"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2bh-kS-6kx" secondAttribute="height" multiplier="1:1" id="buW-XJ-FDI"/>
                                 </constraints>
@@ -1881,6 +2061,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Xj-FX-u6I">
                                 <rect key="frame" x="0.0" y="535" width="40" height="40"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="2Xj-FX-u6I" secondAttribute="height" multiplier="1:1" id="0DM-Et-s6l"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="NR0-4S-dcu"/>
@@ -1900,6 +2081,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A4h-dH-lKq">
                                 <rect key="frame" x="0.0" y="161" width="40" height="40"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="A4h-dH-lKq" secondAttribute="height" multiplier="1:1" id="wYq-RL-FI1"/>
                                 </constraints>
@@ -1917,6 +2099,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ufZ-j1-sAA">
                                 <rect key="frame" x="374" y="535" width="40" height="40"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ufZ-j1-sAA" secondAttribute="height" id="JnB-dX-v7S"/>
                                 </constraints>
@@ -1936,19 +2119,23 @@
                                 <rect key="frame" x="0.0" y="575" width="414" height="161"/>
                                 <subviews>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CZp-uw-GjL" customClass="LevelMeter" customModule="Centurion" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="12" width="226" height="42"/>
+                                        <rect key="frame" x="20" y="12" width="226" height="42.5"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.81520515680000005" green="0.67464822530000002" blue="0.15889613329999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cZU-H1-pfK" customClass="LevelMeter" customModule="Centurion" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="57" width="226" height="42"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cZU-H1-pfK" customClass="LevelMeter" customModule="Centurion" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="54.5" width="226" height="42"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.81520515680000005" green="0.67464822530000002" blue="0.15889613329999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ifd-4w-NdS" customClass="LevelMeter" customModule="Centurion" customModuleProvider="target">
-                                        <rect key="frame" x="20" y="107" width="226" height="42"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ifd-4w-NdS" customClass="LevelMeter" customModule="Centurion" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="101.5" width="226" height="42.5"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.81520515680000005" green="0.67464822530000002" blue="0.15889613329999999" alpha="1" colorSpace="calibratedRGB"/>
                                     </view>
                                     <progressView opaque="NO" contentMode="scaleToFill" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="80m-CP-kNk">
                                         <rect key="frame" x="20" y="149" width="374" height="2"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="JeX-EM-Vof"/>
                                         </constraints>
@@ -1957,6 +2144,7 @@
                                     </progressView>
                                     <progressView opaque="NO" contentMode="scaleToFill" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="5Rc-hw-uyJ">
                                         <rect key="frame" x="20" y="155" width="374" height="2"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="2" id="Ecy-3s-Hc8"/>
                                         </constraints>
@@ -1965,6 +2153,7 @@
                                     </progressView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FYh-K5-lKi">
                                         <rect key="frame" x="364" y="58" width="44" height="44"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="44" id="hDD-Hd-1GZ"/>
                                             <constraint firstAttribute="height" constant="44" id="ivz-Yn-dZm"/>
@@ -1983,12 +2172,14 @@
                                     </button>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NO UNIT SELECTED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="BVd-eF-lsg">
                                         <rect key="frame" x="12" y="12" width="234" height="127"/>
+                                        <animations/>
                                         <color key="backgroundColor" red="0.81520515680000005" green="0.67464822530000002" blue="0.15889613329999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="RedHelmet.png" highlightedImage="RedHelmetHighlight.png" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ne-ey-sxc">
                                         <rect key="frame" x="265" y="22" width="103" height="117"/>
+                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="5Ne-ey-sxc" secondAttribute="height" multiplier="52:59" id="3Uh-Qx-8mi"/>
                                             <constraint firstAttribute="width" constant="104" id="7Cx-ug-fZS"/>
@@ -2000,6 +2191,7 @@
                                         </variation>
                                     </imageView>
                                 </subviews>
+                                <animations/>
                                 <color key="backgroundColor" red="0.81520515680000005" green="0.67464822530000002" blue="0.15889613329999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="cZU-H1-pfK" firstAttribute="centerY" secondItem="BVd-eF-lsg" secondAttribute="centerY" id="4XW-EW-ZC3"/>
@@ -2060,12 +2252,13 @@
                                 </variation>
                             </view>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="m8S-7m-ILT" firstAttribute="leading" secondItem="A4h-dH-lKq" secondAttribute="leading" id="2en-LI-wxN"/>
                             <constraint firstItem="m8S-7m-ILT" firstAttribute="bottom" secondItem="ufZ-j1-sAA" secondAttribute="bottom" id="4zH-8X-O7D"/>
                             <constraint firstItem="Y6c-S7-aZf" firstAttribute="leading" secondItem="18L-bl-qQQ" secondAttribute="leading" id="8na-eG-ooR"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="w9O-fV-aS1" secondAttribute="trailing" constant="-16" id="9Oe-21-6Jq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w9O-fV-aS1" secondAttribute="trailing" constant="-20" id="9Oe-21-6Jq"/>
                             <constraint firstItem="Y4r-26-XBq" firstAttribute="top" secondItem="w9O-fV-aS1" secondAttribute="bottom" id="GEg-2e-IRc"/>
                             <constraint firstAttribute="centerY" secondItem="m8S-7m-ILT" secondAttribute="centerY" id="H5d-Ji-yKu"/>
                             <constraint firstItem="Y4r-26-XBq" firstAttribute="top" secondItem="w9O-fV-aS1" secondAttribute="bottom" id="IWL-sP-AY9"/>
@@ -2074,14 +2267,14 @@
                             <constraint firstItem="m8S-7m-ILT" firstAttribute="trailing" secondItem="ufZ-j1-sAA" secondAttribute="trailing" id="Lhe-QY-Wu9"/>
                             <constraint firstItem="2Xj-FX-u6I" firstAttribute="width" secondItem="ufZ-j1-sAA" secondAttribute="width" id="LqZ-Gb-9w2"/>
                             <constraint firstItem="w9O-fV-aS1" firstAttribute="bottom" secondItem="18L-bl-qQQ" secondAttribute="bottomMargin" id="N6i-1T-H7P"/>
-                            <constraint firstItem="w9O-fV-aS1" firstAttribute="leading" secondItem="18L-bl-qQQ" secondAttribute="leadingMargin" constant="-16" id="OYM-PU-kim"/>
+                            <constraint firstItem="w9O-fV-aS1" firstAttribute="leading" secondItem="18L-bl-qQQ" secondAttribute="leadingMargin" constant="-20" id="OYM-PU-kim"/>
                             <constraint firstItem="2bh-kS-6kx" firstAttribute="trailing" secondItem="m8S-7m-ILT" secondAttribute="trailing" id="Qsq-0w-vMa"/>
                             <constraint firstItem="m8S-7m-ILT" firstAttribute="width" secondItem="2Xj-FX-u6I" secondAttribute="width" multiplier="11" priority="900" constant="10" id="UHT-48-fJZ"/>
                             <constraint firstItem="m8S-7m-ILT" firstAttribute="bottom" secondItem="2Xj-FX-u6I" secondAttribute="bottom" id="YMr-Dc-ddD"/>
                             <constraint firstItem="w9O-fV-aS1" firstAttribute="top" secondItem="m8S-7m-ILT" secondAttribute="bottom" id="ZtF-g7-Yfq"/>
                             <constraint firstItem="2Xj-FX-u6I" firstAttribute="width" secondItem="A4h-dH-lKq" secondAttribute="width" id="c57-zd-m4j"/>
-                            <constraint firstItem="m8S-7m-ILT" firstAttribute="leading" secondItem="18L-bl-qQQ" secondAttribute="leadingMargin" constant="-16" id="cf4-rv-x2g"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="m8S-7m-ILT" secondAttribute="trailing" constant="-16" id="huu-Se-LKf"/>
+                            <constraint firstItem="m8S-7m-ILT" firstAttribute="leading" secondItem="18L-bl-qQQ" secondAttribute="leadingMargin" constant="-20" id="cf4-rv-x2g"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="m8S-7m-ILT" secondAttribute="trailing" constant="-20" id="huu-Se-LKf"/>
                             <constraint firstItem="Y6c-S7-aZf" firstAttribute="top" secondItem="18L-bl-qQQ" secondAttribute="top" id="j8B-Px-pib"/>
                             <constraint firstItem="m8S-7m-ILT" firstAttribute="top" secondItem="A4h-dH-lKq" secondAttribute="top" id="n9f-F4-Pmz"/>
                             <constraint firstAttribute="trailing" secondItem="Y6c-S7-aZf" secondAttribute="trailing" id="sRj-bJ-pFo"/>
@@ -2139,6 +2332,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qnv-xb-lyy">
                                 <rect key="frame" x="50" y="158" width="315" height="354"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="315" id="aPJ-Io-jPR"/>
                                     <constraint firstAttribute="height" constant="354" id="nMK-iK-5ac"/>
@@ -2146,12 +2340,14 @@
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Blue Wins!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdz-FJ-qpA">
                                 <rect key="frame" x="87" y="597.5" width="240.5" height="62.5"/>
+                                <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="52"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AAQ-iq-HxF">
                                 <rect key="frame" x="176" y="673" width="62" height="44"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="Vvf-Jf-gz6"/>
                                     <constraint firstAttribute="width" constant="62" id="fJv-6H-Egt"/>
@@ -2170,6 +2366,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.34999999999999998" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lRF-Oa-H89" firstAttribute="top" secondItem="AAQ-iq-HxF" secondAttribute="bottom" constant="19" id="0bG-u2-dl0"/>
